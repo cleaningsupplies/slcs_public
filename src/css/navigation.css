@@ -1,0 +1,23 @@
+@import url("styles.css");
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 0 5px 5px;
+    
+}
+
+.NavLink{
+    text-decoration: none;
+}
+
+.active{
+    color: #BAD4D7;
+}
+
+.inactive{
+    color: var(--base_font_color);
+}
+
+
+

@@ -1,0 +1,18 @@
+:root{
+    --base_bg_color: white;
+    
+    --base_font_color: #707070;
+
+    --primary_turquoise: #BAD4D7;
+    --secondary_turquoise: #67898D;
+
+    --primary_rose: #DEC4C0;
+    --secondary_rose: #D59188;
+
+    --primary_grey: #F3F4F7;
+    --secondary_grey: #E2E2E2;
+
+    --font_georgia: Georgia;
+    --font_montserrat: "Montserrat";
+
+}
