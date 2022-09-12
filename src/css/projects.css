@@ -1,0 +1,72 @@
+@import url(styles.css);
+
+.intro{
+    font-family: var(--font_montserrat);
+    padding: 4vh 2vw 4vh 6vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+}
+
+.projects_container{
+    text-align: center;
+    height: 58vh;
+    width: 100vw;
+    border-spacing: 0;
+}
+
+tr{
+    height: 50%;
+}
+
+td{
+    width: 30%;
+}
+
+.overlay_container{
+    position: absolute;
+    bottom: 0;
+    height: 58vh;
+    width: 100vw;
+    border-spacing: 0;
+}
+
+.rose{
+    background-color: var(--primary_rose);
+}
+
+.turquoise{
+    background-color: var(--primary_turquoise);
+}
+
+.dk_turquoise{
+    background-color: var(--secondary_turquoise);
+}
+
+.grey{
+    background-color: var(--primary_grey);
+}
+
+
+#_1:hover{
+    background-color: #bad4d7b7;
+}
+
+#_1:before{
+    content: attr(data-name) "\A" attr(data-description);
+    visibility: hidden;
+    opacity: 0;
+    white-space:pre-wrap;
+}
+
+#_1:hover:before{
+    opacity: 1;
+    visibility: visible;
+}
+
+#_1[data-name]{
+    color: blueviolet;
+}
+
+
+

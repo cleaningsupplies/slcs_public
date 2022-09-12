@@ -10,17 +10,17 @@ export default function Navigation() {
     <>
       <BrowserRouter>
           <div className='navbar'>
-              <div style={{ margin: '10px' }}>
+              <div className='navItem'>
                   <NavLink className={({ isActive }) => (isActive ? 'NavLink active' : 'NavLink inactive')} to="/">
                       Projects
                   </NavLink>
               </div>
-              <div style={{ margin: '10px' }}>
+              <div className='navItem'>
                   <NavLink className={({ isActive }) => (isActive ? 'NavLink active' : 'NavLink inactive')} to="/about">
                       About
                   </NavLink>
               </div>
-              <div style={{ margin: '10px' }}>
+              <div className='navItem'>
                   <NavLink className={({ isActive }) => (isActive ? 'NavLink active' : 'NavLink inactive')} to="/contact">
                       Contact
                   </NavLink>

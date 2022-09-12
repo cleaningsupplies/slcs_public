@@ -1,10 +1,18 @@
 @import url("styles.css");
 
 .navbar {
+    height: 10vh;
     display: flex;
+    align-items: center;
+    margin-right: 2vw;
     justify-content: flex-end;
-    padding: 5px 0 5px 5px;
-    
+    padding: 2vh 0 2vh 0;
+}
+
+.navItem{
+    width: 12vw;
+    margin: 2vh 0 2vh 0;
+    text-align: center;
 }
 
 .NavLink{
@@ -12,7 +20,9 @@
 }
 
 .active{
-    color: #BAD4D7;
+    font-weight: bold;
+    color: var(--base_font_color);
+
 }
 
 .inactive{
