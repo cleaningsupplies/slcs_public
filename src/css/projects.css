@@ -31,6 +31,12 @@ td{
     border-spacing: 0;
 }
 
+img{
+    width: 70%;
+    display: block;
+    margin: auto;
+}
+
 .rose{
     background-color: var(--primary_rose);
 }
@@ -47,26 +53,48 @@ td{
     background-color: var(--primary_grey);
 }
 
-
 #_1:hover{
-    background-color: #bad4d7b7;
+    background-color: #dec4c0c0;
+    cursor: pointer;
 }
 
-#_1:before{
-    content: attr(data-name) "\A" attr(data-description);
-    visibility: hidden;
-    opacity: 0;
-    white-space:pre-wrap;
-}
-
-#_1:hover:before{
-    opacity: 1;
+#_1:hover .project{
     visibility: visible;
 }
 
-#_1[data-name]{
-    color: blueviolet;
+#_2:hover{
+    background-color: #BAD4D7c0;
+    cursor: pointer;
 }
+
+#_2:hover .project{
+    visibility: visible;
+}
+
+#_3:hover{
+    background-color: #67898Dc0;
+    cursor: pointer;
+}
+
+#_3:hover .project{
+    visibility: visible;
+}
+
+.project{
+    padding-left: 5%;
+    visibility: hidden;
+    color: white;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.description{
+    font-family: var(--font_montserrat);
+    font-size: 3vh;
+}
+
 
 
 
