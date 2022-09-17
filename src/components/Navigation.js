@@ -3,25 +3,25 @@ import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Projects from '../components/Projects';
-import "../css/navigation.css"
+import styles from "../css/navigation.module.css"
 
 export default function Navigation() {
   return (
     <>
       <BrowserRouter>
-          <div className='navbar'>
-              <div className='navItem'>
-                  <NavLink className={({ isActive }) => (isActive ? 'NavLink active' : 'NavLink inactive')} to="/">
+          <div className={styles['navbar']}>
+              <div className={styles['navItem']}>
+                  <NavLink className={({ isActive }) => (isActive ? `${styles['NavLink']} ${styles['active']}` : `${styles['NavLink']} ${styles['inactive']}`)} to="/">
                       Projects
                   </NavLink>
               </div>
-              <div className='navItem'>
-                  <NavLink className={({ isActive }) => (isActive ? 'NavLink active' : 'NavLink inactive')} to="/about">
+              <div className={styles['navItem']}>
+                  <NavLink className={({ isActive }) => (isActive ? `${styles['NavLink']} ${styles['active']}` : `${styles['NavLink']} ${styles['inactive']}`)} to="/about">
                       About
                   </NavLink>
               </div>
-              <div className='navItem'>
-                  <NavLink className={({ isActive }) => (isActive ? 'NavLink active' : 'NavLink inactive')} to="/contact">
+              <div className={styles['navItem']}>
+                  <NavLink className={({ isActive }) => (isActive ? `${styles['NavLink']} ${styles['active']}` : `${styles['NavLink']} ${styles['inactive']}`)} to="/contact">
                       Contact
                   </NavLink>
               </div>

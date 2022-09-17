@@ -10,7 +10,9 @@ body {
   font-family: var(--font_georgia);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--base_bg_color);
   color: var(--base_font_color);
   font-size: 4vh;
+  background-color: var(--base_bg_color);
 }
+
+
