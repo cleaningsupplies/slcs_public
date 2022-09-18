@@ -1,9 +1,39 @@
 @import url("styles.css");
 
+.about{
+    height: 86vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.text{
+    padding: 4vh 2vw 4vh 6vw;
+    width: 80vw;
+}
+
 .intro{
     font-family: var(--font_montserrat);
-    padding: 4vh 2vw 4vh 6vw;
     height: 20vh;
     display: flex;
     align-items: center;
+}
+
+.description{
+    font-size: 2.8vh;
+    font-family: var(--font_montserrat);
+    text-align: justify;
+}
+
+.image_container{
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile{
+    border-radius: 10px;
+    width: 65%;
+    display: block;
+    margin: auto;
 }

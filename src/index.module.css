@@ -13,6 +13,7 @@ body {
   color: var(--base_font_color);
   font-size: 4vh;
   background-color: var(--base_bg_color);
+  width: 100%;
 }
 
 

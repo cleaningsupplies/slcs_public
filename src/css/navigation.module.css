@@ -1,6 +1,11 @@
 @import url("styles.css");
 
+.navigation{
+    width: 100%;
+}
+
 .navbar {
+    width: 100%;
     height: 10vh;
     display: flex;
     align-items: center;

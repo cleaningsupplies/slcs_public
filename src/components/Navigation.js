@@ -8,7 +8,7 @@ import styles from "../css/navigation.module.css"
 export default function Navigation() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter className={styles["navigation"]}>
           <div className={styles['navbar']}>
               <div className={styles['navItem']}>
                   <NavLink className={({ isActive }) => (isActive ? `${styles['NavLink']} ${styles['active']}` : `${styles['NavLink']} ${styles['inactive']}`)} to="/">

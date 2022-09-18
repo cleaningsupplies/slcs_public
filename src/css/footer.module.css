@@ -1,0 +1,7 @@
+@import url("styles.css");
+
+.footer{
+    background-color: var(--secondary_turquoise);
+    width: 100%;
+    height: 20vh;
+}

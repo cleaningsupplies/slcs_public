@@ -1,5 +1,8 @@
 @import url(styles.css);
 
+.projects{
+    width: 100%;
+}
 
 .intro{
     font-family: var(--font_montserrat);
@@ -12,7 +15,7 @@
 .projects_container{
     text-align: center;
     height: 58vh;
-    width: 100vw;
+    width: 100%;
     border-spacing: 0;
 }
 
@@ -28,7 +31,7 @@ td{
     position: absolute;
     bottom: 0;
     height: 58vh;
-    width: 100vw;
+    width: 100%;
     border-spacing: 0;
 }
 
