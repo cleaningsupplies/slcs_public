@@ -4,37 +4,44 @@
     height: 86vh;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
-
 .text{
-    padding: 4vh 2vw 4vh 6vw;
-    width: 80vw;
+    padding-left: 8vw;
+    width: 60vw;
+    position: absolute;
 }
 
 .intro{
-    font-family: var(--font_montserrat);
-    height: 20vh;
-    display: flex;
-    align-items: center;
+    font-family: var(--font_georgia);
+    font-size: 5vh;
+    height: 15vh;
+    color: var(--secondary_turquoise);
 }
 
 .description{
     font-size: 2.8vh;
     font-family: var(--font_montserrat);
     text-align: justify;
+    color: var(--secondary_turquoise);
+    font-weight: 450;
+}
+
+.link{
+    font-weight: 550;
 }
 
 .image_container{
-    width: 70vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
 }
 
 .profile{
     border-radius: 10px;
-    width: 65%;
-    display: block;
-    margin: auto;
+    height: 75vh;
+    width: auto;
+    float: right;
+    margin-right: 8vw;
 }
