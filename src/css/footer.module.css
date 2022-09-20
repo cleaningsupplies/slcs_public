@@ -50,6 +50,7 @@
     color: var(--primary_turquoise);
     font-size: 3vh;
     padding: 10%;
+    font-family: var(--font_montserrat);
 }
 
 .navItem:hover, .linkedIn:hover, .github:hover, .instagram:hover{

@@ -20,7 +20,7 @@ export default function Navigation() {
                       About
                   </NavLink>
               </div>
-              <div className={styles['navItem']}>
+              <div className={`${styles['navItem']} ${styles['contact']}`}>
                   <NavLink className={({ isActive }) => (isActive ? `${styles['NavLink']} ${styles['active']}` : `${styles['NavLink']} ${styles['inactive']}`)} to="/contact">
                       Contact
                   </NavLink>
