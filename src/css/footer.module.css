@@ -3,5 +3,66 @@
 .footer{
     background-color: var(--secondary_turquoise);
     width: 100%;
-    height: 20vh;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_container{
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    right: 13%;
+}
+
+.linkedIn, .instagram, .github{
+    color: var(--primary_turquoise);
+}
+
+.icons_link{
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.navigation{
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 13%;
+}
+
+.navItem{
+    text-decoration: none;
+    color: var(--primary_turquoise);
+    font-size: 3vh;
+    padding: 10%;
+}
+
+.navItem:hover, .linkedIn:hover, .github:hover, .instagram:hover{
+    color: var(--primary_rose);
+}
+
+.copyright{
+    font-size: 1.8vh;
+    text-align: center;
+    color: var(--primary_turquoise);
+}
+
+.space {
+    border-left: 0px;
+    height: 195px;
 }

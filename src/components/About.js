@@ -1,11 +1,13 @@
 import React from 'react';
 import styles from "../css/about.module.css";
 
+
 export default function About() {
 
   document.body.style.backgroundColor = "#BAD4D7";
 
   return (
+   
     <div className={styles["about"]}>
    
       <div className={styles['text']}>
@@ -24,7 +26,8 @@ export default function About() {
             Ever since I missed programming and now I'm getting back on track. Programming and constantly learning new thing as a junior front end developer.
             <br></br>
             <br></br>
-            <span className={styles["link"]}>Let's get in touch &#8594;</span>
+            <br></br>
+            <a href="/contact" className={styles["link"]}>Let's get in touch &#8594;</a>
         </div>
       </div>
      

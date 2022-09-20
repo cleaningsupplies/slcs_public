@@ -24,6 +24,10 @@
     text-decoration: none;
 }
 
+.NavLink:hover{
+    font-weight: bold;
+}
+
 .active{
     font-weight: bold;
     color: var(--base_font_color);
