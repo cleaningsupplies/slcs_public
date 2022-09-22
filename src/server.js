@@ -5,18 +5,20 @@ const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 
+
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
-app.listen(3000, ()=> console.log("Server running"));
+app.listen(3000, () => console.log("Server Running"));
+
 
 const contactEmail = nodemailer.createTransport({
     service:'gmail',
     auth:{
         user: config.login.user,
         pass: config.login.pass
-    }
+    },
 });
 
 contactEmail.verify((error) => {
@@ -25,4 +27,26 @@ contactEmail.verify((error) => {
     }else{
         console.log("ready to send")
     }
-})
+});
+
+app.post("/contact", (req, res) => {
+    
+    const name = req.body.name;
+    const email = req.body.email;
+    const message = req.body.message; 
+    const mail = {
+      from: name,
+      to: config.login.user,
+      subject: "Contact Form Submission",
+      html: `<p>Name: ${name}</p>
+             <p>Email: ${email}</p>
+             <p>Message: ${message}</p>`,
+    };
+    contactEmail.sendMail(mail, (error) => {
+      if (error) {
+        res.json({ status: "ERROR" });
+      } else {
+        res.json({ status: "Message Sent" });
+      }
+    });
+  });
