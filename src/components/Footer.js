@@ -21,9 +21,9 @@ export default function Footer() {
       </div>
       <div className={styles["copyright"]}>&#169; Copyright &#8226; 2022 &#8226; Stephanie Lindner</div>
       <div className={styles["icons"]}>
-        <a href={links.github} target="_blank" className={styles["icons_link"]}> <FontAwesomeIcon className={styles["github"]} icon={faGithub}></FontAwesomeIcon> </a>
-        <a href={links.linkedIn} target="_blank" className={styles["icons_link"]}> <FontAwesomeIcon className={styles["linkedIn"]} icon={faLinkedinIn}></FontAwesomeIcon> </a>
-        <a href={links.instagram} target="_blank" className={styles["icons_link"]}> <FontAwesomeIcon className={styles["instagram"]} icon={faInstagram}></FontAwesomeIcon> </a>
+        <a href={links.github} target="_blank" rel="noreferrer" className={styles["icons_link"]}> <FontAwesomeIcon className={styles["github"]} icon={faGithub}></FontAwesomeIcon> </a>
+        <a href={links.linkedIn} target="_blank" rel="noreferrer" className={styles["icons_link"]}> <FontAwesomeIcon className={styles["linkedIn"]} icon={faLinkedinIn}></FontAwesomeIcon> </a>
+        <a href={links.instagram} target="_blank" rel="noreferrer" className={styles["icons_link"]}> <FontAwesomeIcon className={styles["instagram"]} icon={faInstagram}></FontAwesomeIcon> </a>
       </div>
     </div>
   )

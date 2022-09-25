@@ -1,9 +1,20 @@
-const express = require('express')
+const cors = require("cors");
+const express = require("express");
+
 const app = express()
-const port = 3001;
+
+app.use(cors());
+
+app.use(express.json());
+
+const port = 3000;
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
+})
+
+app.post('/contact/hi', (req, res) => {
+  res.send('POST request to the homepage')
 })
 
 app.listen(port, () => {
@@ -21,7 +32,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Server is working. Please post at "/contact" to submit a message.')
 })
 
@@ -44,6 +55,5 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);
 })
-
 
 */
