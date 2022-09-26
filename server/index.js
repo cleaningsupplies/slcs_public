@@ -9,16 +9,16 @@ app.use(express.json());
 
 const port = 3000;
 
-app.get('/', (req, res) => {
+app.get('/contact/hi', (req, res) => {
   res.send('Hello World!')
 })
 
 app.post('/contact/hi', (req, res) => {
-  res.send('POST request to the homepage')
+  res.send(req.body)
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Listening on port: ${port}`)
 })
 
 /*
