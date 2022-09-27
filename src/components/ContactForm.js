@@ -15,11 +15,15 @@ export default function ContactForm() {
     const inputRef = useRef(null);
 
     async function handleSubmit(e){
+
+      
       e.preventDefault();
       //setStatus("Sending...");
-      const { name } = e.target.elements;
+      const { name, email, message } = e.target.elements;
       let details = {
         name: name.value,
+        email: email.value,
+        message: message.value,
       };
       /*
       let response = await fetch("http://localhost:3000/contact/hi", {
@@ -39,7 +43,7 @@ export default function ContactForm() {
         url: "http://localhost:3000/contact/hi",
         headers: {}, 
         data: {
-          details: details
+          details: details,
         }
       }) .then(function (response) {
             console.log(response);
@@ -63,7 +67,9 @@ export default function ContactForm() {
 
     return (
       <form onSubmit={handleSubmit}>
-        <input ref={inputRef} id="name" placeholder="First Name" type="text"></input>
+        <input id="name" placeholder="first name" type="text" required></input>
+        <input id="email" placeholder="e-mail address" type="email" required></input>
+        <textarea id="message" placeholder="..." type="text" required></textarea>
      
         <button type="Submit">Start</button>
       </form>
