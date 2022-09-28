@@ -1,40 +1,33 @@
-const config = require("./mailer/config/index.js")
-
-
+const config = require("./config/index.js")
 const cors = require("cors");
 const express = require("express");
-
-const app = express()
-
-app.use(cors());
-
-app.use(express.json());
-
-
-const router = express.Router();
-app.use("/", router);
-
 const nodemailer = require("nodemailer");
 
-const port = 3000;
+const app = express();
+const router = express.Router();
+const port = config.PORT;
 
-app.get('/contact/hi', (req, res) => {
+app.use(cors());
+app.use(express.json());
+app.use("/", router);
+
+app.get('/contact/sendForm', (req, res) => {
   res.send('Hello World!')
 })
-/*
-app.post('/contact/hi', (req, res) => {
-  res.send(req.body)
-})*/
+
+// app.post('/contact/sendForm', (req, res) => {
+//   res.send(req.body)
+// })
 
 app.listen(port, () => {
   console.log(`Listening on port: ${port}`)
-})
+});
 
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: config.user,
-    pass: config.pass,
+    user: config.USER,
+    pass: config.PASS,
   },
 });
 
@@ -46,19 +39,20 @@ contactEmail.verify((error) => {
   }
 });
 
-router.post("/contact/hi", (req, res) => {
+router.post("/contact/sendForm", (req, res) => {
   const name = req.body.details.name;
   const email = req.body.details.email;
   const message = req.body.details.message;
 
   const mail = {
     from: email,
-    to: config.user,
+    to: config.USER,
     subject: "SLCS Contact Form",
-    html: `<p>Name: ${name}</p>
-          <p>Email: ${email}</p>
-          <p>Message: ${message}</p>`,
+    html: ` <p>Name: ${name}</p>
+            <p>Email: ${email}</p>
+            <p>Message: ${message}</p>`,
   };
+  
   contactEmail.sendMail(mail, (error) => {
     if (error) {
       res.json({ status: "ERROR" });
