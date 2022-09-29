@@ -1,0 +1,34 @@
+@import url("styles.css");
+
+.formContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.sent{
+    margin-bottom: 2vh;
+    color: aqua;
+    visibility: hidden;
+}
+
+.form{
+    width: 50%;
+    display: flex;
+    flex-direction: column; 
+}
+
+.form > input, .form > textarea{
+    font-size: 3vh;
+    font-family: var(--font_montserrat);
+    resize: none;
+}
+
+.message{
+    height: 20vh;
+    text-align: start;  
+}

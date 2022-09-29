@@ -1,14 +1,18 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+import styles from "../css/contactForm.module.css";
 
 export default function ContactForm() {
 
     const [status, setStatus] = useState("Send");
-    const [sent, setSent] = useState(" ");
+    const [sent, setSent] = useState("Your message was successfully sent.");
 
     async function handleSubmit(e){
       setStatus("Sending...");
       e.preventDefault();
+
+      const form = document.querySelector("#form");
+      const userFeedback = document.querySelector("#sent");
 
       const { name, email, message } = e.target.elements;
       let details = {
@@ -26,24 +30,25 @@ export default function ContactForm() {
         }
       }).then(function (response) {
           //console.log(response);
-          setSent("Your message was successfully sent.");
-          document.querySelector(".contactForm").reset();
+          userFeedback.style.visibility = "visible";
+          //setSent("Your message was successfully sent.");
+          form.reset();
           setStatus("Send");
       }).catch(function (error) {
           setSent("Oops. there's been a problem while sending, please try again.");
           //console.log(error);
       });
 
-      setTimeout(()=> setSent(" "), 4000);
+      setTimeout(()=> userFeedback.style.visibility = "hidden", 4000);
     }
     
     return (
-      <div>
-        <div>{sent}</div>
-        <form className="contactForm" onSubmit={handleSubmit}>
-          <input id="name" placeholder="first name" type="text" required></input>
-          <input id="email" placeholder="e-mail address" type="email" required></input>
-          <textarea id="message" placeholder="your message" type="text" required></textarea>
+      <div className={styles["formContainer"]}>
+        <div id="sent" className={styles["sent"]}>{sent}</div>
+        <form id="form" className={styles["form"]} onSubmit={handleSubmit}>
+          <input id="name" className={styles["name"]} placeholder="first name" type="text" required></input>
+          <input id="email" className={styles["email"]} placeholder="e-mail address" type="email" required></input>
+          <textarea id="message" className={styles["message"]} placeholder="your message" type="text" required></textarea>
           <button type="Submit">{status}</button>
         </form>
       </div>
