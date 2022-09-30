@@ -41,14 +41,30 @@ export default function ContactForm() {
 
       setTimeout(()=> userFeedback.style.visibility = "hidden", 4000);
     }
+
+    function focus(e){
+      console.log(e.target.id, e.target.label)
+      switch(e.target.id){
+        case "name": 
+            document.getElementById("n").style.visibility = "visible"; 
+        break;
+        case "email": document.getElementById("e").style.visibility = "visible"; break;
+        case "message": document.getElementById("m").style.visibility = "visible"; break;
+        default: break;
+      }
+    }
+
     
     return (
       <div className={styles["formContainer"]}>
         <div id="sent" className={styles["sent"]}>{sent}</div>
         <form id="form" className={styles["form"]} onSubmit={handleSubmit}>
-          <input id="name" className={styles["name"]} placeholder="first name" type="text" required></input>
-          <input id="email" className={styles["email"]} placeholder="e-mail address" type="email" required></input>
-          <textarea id="message" className={styles["message"]} placeholder="your message" type="text" required></textarea>
+          <label id="n" htmlFor='name'>Name</label>
+          <input id="name" className={styles["name"]} placeholder="Name" type="text" required onFocus={focus}></input>
+          <label id="e" htmlFor='email'>E-Mail Adress</label>
+          <input id="email" className={styles["email"]} placeholder="E-Mail Address" type="email" required onFocus={focus}></input>
+          <label id="m" htmlFor='message'>Message</label>
+          <textarea id="message" className={styles["message"]} placeholder="Message" type="text" required onFocus={focus}></textarea>
           <button type="Submit">{status}</button>
         </form>
       </div>

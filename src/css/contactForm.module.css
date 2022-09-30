@@ -7,7 +7,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
 .sent{
@@ -26,9 +25,32 @@
     font-size: 3vh;
     font-family: var(--font_montserrat);
     resize: none;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid var(--secondary_rose);
+    outline: 0;
+    color: var(--secondary_rose);
+    padding: 7px 0;
+    background: transparent;
+    margin-bottom: 2vh;
+}
+
+.form > label{
+    color: var(--secondary_rose);
+    font-size: 2vh;
+    font-family: var(--font_montserrat);
+    visibility: hidden;
 }
 
 .message{
     height: 20vh;
     text-align: start;  
+}
+
+.form > input:focus::placeholder, .form > textarea:focus::placeholder {
+    color: transparent;
+}
+
+::placeholder{
+    color: var(--secondary_rose);
 }
