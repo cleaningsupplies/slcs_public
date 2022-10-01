@@ -47,10 +47,56 @@
     text-align: start;  
 }
 
+/*
+
 .form > input:focus::placeholder, .form > textarea:focus::placeholder {
     color: transparent;
 }
 
+
+
 ::placeholder{
     color: var(--secondary_rose);
 }
+
+
+*/
+
+
+/*
+
+.form {
+    input{
+        &:focus{
+
+            &::placeholder{
+                color: transparent;
+
+            }
+
+        }
+    }
+}
+
+*/
+
+@mixin avatar($size, $circle: true) {
+
+  
+    @if $circle {
+
+        &::placeholder{
+            color: $size;
+        }
+
+        
+ 
+    }
+  }
+  
+  .form > input:focus {
+    @include avatar(transparent, $circle: true);
+  }
+
+
+  

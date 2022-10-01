@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import styles from "../css/contactForm.module.css";
+import styles from "../css/contactForm.module.scss";
 
 export default function ContactForm() {
 
@@ -43,6 +43,7 @@ export default function ContactForm() {
     }
 
     function focus(e){
+      /*
       console.log(e.target.id, e.target.label)
       switch(e.target.id){
         case "name": 
@@ -51,10 +52,9 @@ export default function ContactForm() {
         case "email": document.getElementById("e").style.visibility = "visible"; break;
         case "message": document.getElementById("m").style.visibility = "visible"; break;
         default: break;
-      }
+      }*/
     }
-
-    
+   
     return (
       <div className={styles["formContainer"]}>
         <div id="sent" className={styles["sent"]}>{sent}</div>
