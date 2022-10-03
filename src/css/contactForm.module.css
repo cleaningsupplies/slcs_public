@@ -1,23 +1,43 @@
 @import url("styles.css");
 
-.formContainer{
-    width: 100%;
-    height: 100%;
+.container{
+    width: 60%;
+    height: 93%;
+    background-color: var(--primary_turquoise);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.formContainer{
+    width:90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.intro{
+    font-family: var(--font_georgia);
+    font-size: 5vh;
+    height: 15vh;
+    color: var(--secondary_turquoise);
 }
 
 .sent{
-    margin-bottom: 2vh;
-    color: aqua;
-    visibility: hidden;
+    color: var(--secondary_rose);
+    text-align: center;
+    /*
+    visibility: hidden;*/
 }
 
 .form{
-    width: 50%;
+    width: 100%;
+    height: 100%;
     display: flex;
+    justify-content: center;
     flex-direction: column; 
 }
 
@@ -27,19 +47,20 @@
     resize: none;
     border-radius: 0px;
     border: none;
-    border-bottom: 1px solid var(--secondary_rose);
-    outline: 0;
-    color: var(--secondary_rose);
-    padding: 7px 0;
+    border-bottom: 1px solid #a8c7ca;
     background: transparent;
-    margin-bottom: 2vh;
+    outline: 0;
+    margin-bottom: 5vh;
+    color: var( --base_font_color);
+    
 }
 
 .form > label{
-    color: var(--secondary_rose);
-    font-size: 2vh;
+    color: var(--secondary_turquoise);
+    font-size: 2.1vh;
     font-family: var(--font_montserrat);
-    visibility: hidden;
+    padding-left: 4px;
+    padding-bottom: 2px;
 }
 
 .message{
@@ -53,11 +74,25 @@
 }
 
 ::placeholder{
-    color: var(--secondary_rose);
+    color: #a8c7ca;
+}
+
+.button_container{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .submit{
     width: 20%;
+    height: 3vh;
+    background-color: var(--secondary_rose);
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    color: var(--base_bg_color);
+    font-family: var(--font_montserrat);
 }
 
 

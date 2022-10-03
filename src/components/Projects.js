@@ -3,7 +3,7 @@ import styles from "../css/projects.module.css"
 
 export default function Projects() {
 
-  document.body.style.backgroundColor = "white";
+ 
 
   let url = "";
 

@@ -4,10 +4,7 @@ import styles from "../css/about.module.css";
 
 export default function About() {
 
-  document.body.style.backgroundColor = "#BAD4D7";
-
   return (
-   
     <div className={styles["about"]}>
    
       <div className={styles['text']}>
@@ -23,7 +20,7 @@ export default function About() {
             About three years I worked as a research assistant programming interactive user interfaces for mobile devices in android studio.
             I hold master of science in applied cognitive and media science with a focus in computer science.
             After university I started working in IT for the city of Hamburg. 
-            Ever since I missed programming and now I'm getting back on track. Programming and constantly learning new thing as a junior front end developer.
+            Ever since, I missed programming and now I'm back on track programming and constantly learning new things as a junior front end developer.
             <br></br>
             <br></br>
             <br></br>
@@ -32,7 +29,7 @@ export default function About() {
       </div>
      
       <div className={styles["image_container"]}>
-        <img className={styles['profile']} src={require("../img/profile_img.jpg")} alt="profile"></img>
+        <img className={styles['profile']} src={require("../img/profile_img.png")} alt="profile"></img>
       </div> 
     </div>
   )

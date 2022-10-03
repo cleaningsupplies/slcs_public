@@ -2,4 +2,22 @@
 
 .contact{
     height: 86vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--secondary_turquoise);
+}
+
+.intro{
+    height: 100%;
+    width: 40%;
+    color: var(--primary_turquoise);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text{
+    font-size: 7.5vh;
+    width: 80%;
 }
