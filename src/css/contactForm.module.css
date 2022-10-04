@@ -59,10 +59,11 @@
 
 .form > label{
     color: var(--secondary_turquoise);
-    font-size: 2.1vh;
+    font-size: 2.8vh;
     font-family: var(--font_montserrat);
     padding-left: 4px;
-    padding-bottom: 2px;
+    padding-bottom: 5px;
+    font-weight: 450;
 }
 
 .message{
@@ -70,13 +71,14 @@
     text-align: start;  
 }
 
-
 .form > input:focus::placeholder, .form > textarea:focus::placeholder {
     color: transparent;
 }
 
 ::placeholder{
+    font-size: 2.3vh;
     color: #a8c7ca;
+    padding-top: 2px;
 }
 
 .button_container{

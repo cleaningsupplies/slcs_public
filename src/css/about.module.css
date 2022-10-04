@@ -3,20 +3,31 @@
 .about{
     height: 86vh;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
-.text{
-    padding-left: 7vw;
-    width: 50vw;
-    position: absolute;
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary_rose);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.text_container{
+    height: 90%;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .intro{
     font-family: var(--font_georgia);
     font-size: 5vh;
-    height: 15vh;
     color: var(--secondary_rose);
 }
 
@@ -25,6 +36,7 @@
     font-family: var(--font_montserrat);
     text-align: justify;
     font-weight: 450;
+    width: 90%;
 }
 
 .link{
@@ -39,15 +51,28 @@
 }
 
 .image_container{
+    width: 40vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.image{
+    color: transparent;
+    height: 90%;
     width: 100%;
-    position: absolute;
-    z-index: -1;
+    background-image: url("../img/profile_img.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .profile{
     border-radius: 10px;
-    height: 72vh;
+    height: 60vh;
     width: auto;
-    float: right;
-    margin-right: 7vw;
+    float: left;
 }
+
