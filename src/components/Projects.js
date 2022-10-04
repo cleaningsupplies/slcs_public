@@ -35,11 +35,13 @@ export default function Projects() {
               <img className={styles['weather']} src={require("../img/weather.png")} alt="weather app"></img>
             </td>
             <td className={styles['dk_turquoise']}>
-              <img className={styles['noodlee']} src={require("../img/noodlee.png")} alt="noodlee restaurant page"></img>
+              <img className={styles['noodlee']} src={require("../img/noodlee.png")} alt="noodlee restaurant website"></img>
             </td>
           </tr>
           <tr>
-            <td className={styles['turquoise']}></td>
+            <td className={styles['turquoise']}>
+              <img className={styles['slcs']} src={require("../img/slcs.png")} alt="portfolio website"></img>
+            </td>
             <td className={styles['grey']}></td>
             <td className={styles['turquoise']}></td>
           </tr>
@@ -61,7 +63,10 @@ export default function Projects() {
             </td>
           </tr>
           <tr>
-            <td id={styles["_4"]}></td>
+            <td id={styles["_4"]}>
+                <span className={`${styles['project']} ${styles['title']}`}>Portfolio</span><br></br>
+                <span className={`${styles['project']} ${styles['description']}`}>React, NodeJS</span>
+            </td>
             <td id={styles["_5"]}></td>
             <td id={styles["_6"]}></td>
           </tr>

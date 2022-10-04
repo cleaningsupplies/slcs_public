@@ -83,6 +83,15 @@ img{
     visibility: visible;
 }
 
+#_4:hover{
+    background-color: #BAD4D7c0;
+    cursor: pointer;
+}
+
+#_4:hover .project{
+    visibility: visible;
+}
+
 .project{
     padding-left: 5%;
     visibility: hidden;
