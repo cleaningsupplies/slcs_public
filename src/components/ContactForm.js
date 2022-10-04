@@ -6,11 +6,11 @@ export default function ContactForm() {
 
     const [status, setStatus] = useState("Send");
     const [sent, setSent] = useState("Your message was successfully sent.");
-    const [prevInput, setPrevInput] = useState("name");
 
     async function handleSubmit(e){
-      setStatus("Sending...");
       e.preventDefault();
+      setStatus("Sending...");
+      
 
       const form = document.querySelector("#form");
       const userFeedback = document.querySelector("#sent");
@@ -35,10 +35,6 @@ export default function ContactForm() {
           
           //reset form and its labels
           form.reset();
-          let labels = document.querySelectorAll("label");
-          for(let i = 0; i < labels.length; i++){
-            labels[i].style.visibility = "hidden";
-          }
           setStatus("Send");
       }).catch(function (error) {
           setSent("Oops. there's been a problem while sending, please try again.");
@@ -48,11 +44,10 @@ export default function ContactForm() {
       setTimeout(()=> userFeedback.style.visibility = "hidden", 4000);
     }
 
-
-   
     return (
       <div className={styles["container"]}>
         <div className={styles["formContainer"]}>
+        <div id="sent" className={styles["sent"]}>{sent}</div>
           <form id="form" className={styles["form"]} onSubmit={handleSubmit}>
             <label id="n" htmlFor='name'>Name</label>
             <input id="name" className={styles["name"]} placeholder="Name" type="text" tabIndex="12" required></input>
@@ -60,11 +55,9 @@ export default function ContactForm() {
             <input id="email" className={styles["email"]} placeholder="E-Mail address" type="email" tabIndex="13" required></input>
             <label id="m" htmlFor='message'>Message</label>
             <textarea id="message" className={styles["message"]} placeholder="Message" type="text" tabIndex="14" required></textarea>
-             {/* <div id="sent" className={styles["sent"]}>{sent}</div> */}
             <div className={styles["button_container"]}>
              <button className={styles["submit"]} type="Submit">{status}</button>
             </div>
-            
           </form>
         </div>
       </div>

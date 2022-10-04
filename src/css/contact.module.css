@@ -21,3 +21,11 @@
     font-size: 7.5vh;
     width: 80%;
 }
+
+.hr{
+    background-color: #59797c;
+    height: 0.5px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
