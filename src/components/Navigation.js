@@ -11,11 +11,20 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navigation() {
 
-    const tet = ".navigation_navbar__+SmCa";
+    const tet = "navigation_navbar__+SmCa";
 
     function openNavMenu() {
         
-        let x = document.getElementById("myTopnav");
+        //let x = document.getElementById("myTopnav");
+
+        // document.querySelector(`.${styles.scrollValue}`).innerHTML = "test";
+        // document.querySelector(`.${styles.scrollValue}`).style.color = "red";
+        let x = document.querySelector("#myTopnav");
+        // x.className = "responsive"
+        // console.log(x.classList)
+        x.className = tet;
+        console.log(x.classList)
+
         //make navigation responsive (add responsive to class)
         
         //let y = document.querySelector(x.className);
@@ -24,8 +33,7 @@ export default function Navigation() {
 
         //https://codesandbox.io/s/flamboyant-sun-flfpj?file=/src/App.js
         //https://stackoverflow.com/questions/69617831/how-do-i-select-my-css-module-class-using-document-queryselector
-
-        console.log(x.classList, document.querySelector(`.${styles.scrollValue}`));
+//console.log(x.classList, document.querySelector(`.${styles.scrollValue}`));
         // if (x.className === "topnav") {
         //   x.className += " responsive";
         // } else {
@@ -36,8 +44,8 @@ export default function Navigation() {
   return (
     <>
         <BrowserRouter className={styles["navigation"]}>
-        <h1 className={styles.scrollValue}>0</h1>
-            <div id="myTopnav" className={styles['navbar']}>
+        {/* <h1 className={styles.scrollValue}>0</h1> */}
+            <div id="myTopnav" className={styles["navbar"]}>
                 <div className={styles['navItem']}>
                     <NavLink className={({ isActive }) => (isActive ? `${styles['NavLink']} ${styles['active']}` : `${styles['NavLink']} ${styles['inactive']}`)} to="/">
                         Projects
