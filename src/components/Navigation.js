@@ -11,47 +11,44 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navigation() {
 
-    const tet = "navigation_navbar__+SmCa";
+    const navbar = `${styles["navbar"]}`;
+    const navbar_responsive = `${styles["navbar_responsive"]}`;
+
 
     function openNavMenu() {
         
-        //let x = document.getElementById("myTopnav");
+        const navbar_id = document.querySelector("#navbar");
 
-        // document.querySelector(`.${styles.scrollValue}`).innerHTML = "test";
-        // document.querySelector(`.${styles.scrollValue}`).style.color = "red";
-        let x = document.querySelector("#myTopnav");
-        // x.className = "responsive"
-        // console.log(x.classList)
-        x.className = tet;
-        console.log(x.classList)
+        if(navbar_id.className === navbar_responsive){
+            console.log(1, navbar_id.classList)
+            navbar_id.className = navbar;
+        }else{
+            console.log(2, navbar_id.classList)
+            navbar_id.className = navbar_responsive;
+        }
+    }
 
-        //make navigation responsive (add responsive to class)
-        
-        //let y = document.querySelector(x.className);
-        
-        // y.style.color = "red"
-
-        //https://codesandbox.io/s/flamboyant-sun-flfpj?file=/src/App.js
-        //https://stackoverflow.com/questions/69617831/how-do-i-select-my-css-module-class-using-document-queryselector
-//console.log(x.classList, document.querySelector(`.${styles.scrollValue}`));
-        // if (x.className === "topnav") {
-        //   x.className += " responsive";
-        // } else {
-        //   x.className = "topnav";
-        // }
-      }
+    //check resizing to change responsive back
+    window.addEventListener("resize", () => {
+        const navbar_id = document.querySelector("#navbar");
+        if(window.innerWidth >= 1146){
+            navbar_id.className = navbar;
+        }
+    })
 
   return (
     <>
         <BrowserRouter className={styles["navigation"]}>
-        {/* <h1 className={styles.scrollValue}>0</h1> */}
-            <div id="myTopnav" className={styles["navbar"]}>
-                <div className={styles['navItem']}>
+            <div id="navbar" className={styles["navbar"]}>
+                <div href="javascript:void(0);" className={styles['menu']} onClick={openNavMenu}>
+                        <FontAwesomeIcon icon={faBars} />
+                </div>
+                <div className={`${styles['navItem']} ${styles['projects']}`}>
                     <NavLink className={({ isActive }) => (isActive ? `${styles['NavLink']} ${styles['active']}` : `${styles['NavLink']} ${styles['inactive']}`)} to="/">
                         Projects
                     </NavLink>
                 </div>
-                <div className={styles['navItem']}>
+                <div className={`${styles['navItem']} ${styles['about']}`}>
                     <NavLink className={({ isActive }) => (isActive ? `${styles['NavLink']} ${styles['active']}` : `${styles['NavLink']} ${styles['inactive']}`)} to="/about">
                         About
                     </NavLink>
@@ -61,9 +58,8 @@ export default function Navigation() {
                         Contact
                     </NavLink>
                 </div>
-                <div href="javascript:void(0);" className={`${styles['navItem']} ${styles['menu']}`} onClick={openNavMenu}>
-                    <FontAwesomeIcon icon={faBars} />
-                </div>
+                
+                
             </div>
             <Routes>
                 <Route exact path="/" element={<Projects />} />
