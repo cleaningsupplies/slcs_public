@@ -41,7 +41,7 @@
     padding-right: 2vw;
 }
 
-.menu {
+.menu, .cover {
     display: none;
 }
 
@@ -53,6 +53,7 @@
         width: 12vw;
         margin: 2vh 0 2vh 0;
         text-align: center;
+        z-index: 2;
       }
 
     .navItem{
@@ -69,16 +70,20 @@
         
     }
 
+    .navbar_responsive .menu{
+        color: var(--primary_turquoise);
+    }
+
     .navbar_responsive > .projects{
-        top: 10vh;
+         top: 10vh; 
     }
 
     .navbar_responsive > .about{
-        top: 17vh;
+        top: 20vh;
     }
 
     .navbar_responsive > .contact{
-        top: 24vh;
+        top: 30vh;
         padding-right: 0vw;
     }
 
@@ -87,15 +92,30 @@
     .navbar_responsive > .navItem{
         float: none;
         position: absolute;
-        display: flex;
-        flex-direction: column;
-        text-align: right;
-        right: 80px;
+        display: block;
+        text-align: left;
+        left: 8vw;
+        z-index: 2;
     }
 
+    .navbar_responsive >.cover{
+        height: 80%;
+        width: 100vw;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        background-color: #67898df5;
+    }  
 
-      
+    .navbar_responsive .active{
+        color: var(--primary_turquoise);
+    }
+
+    .navbar_responsive .inactive{
+        color: var(--primary_turquoise);
+    }
 }
+
 
 
 

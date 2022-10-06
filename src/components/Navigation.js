@@ -13,28 +13,43 @@ export default function Navigation() {
 
     const navbar = `${styles["navbar"]}`;
     const navbar_responsive = `${styles["navbar_responsive"]}`;
+    const menu = `${styles['menu']}`;
 
+
+    function checkSize(){
+        const navbar_id = document.querySelector("#navbar");
+
+        if(window.innerWidth >= 1146){
+            navbar_id.className = navbar;
+        }
+    }
 
     function openNavMenu() {
-        
         const navbar_id = document.querySelector("#navbar");
 
         if(navbar_id.className === navbar_responsive){
-            console.log(1, navbar_id.classList)
             navbar_id.className = navbar;
         }else{
-            console.log(2, navbar_id.classList)
             navbar_id.className = navbar_responsive;
         }
     }
 
-    //check resizing to change responsive back
-    window.addEventListener("resize", () => {
-        const navbar_id = document.querySelector("#navbar");
-        if(window.innerWidth >= 1146){
-            navbar_id.className = navbar;
-        }
-    })
+ 
+    window.addEventListener("resize", checkSize());
+    checkSize();
+
+    // document.addEventListener("click", (e) => {
+    //     e = e || window.event;
+    //     let target = e.target || e.srcElement;
+    //     const navbar_id = document.querySelector("#navbar");
+
+      
+    //     if(navbar_id.className === navbar_responsive && target.className != navbar_responsive && target.className != menu){
+    //         openNavMenu();
+    //     }
+
+    // }, false);
+
 
   return (
     <>
@@ -43,6 +58,7 @@ export default function Navigation() {
                 <div href="javascript:void(0);" className={styles['menu']} onClick={openNavMenu}>
                         <FontAwesomeIcon icon={faBars} />
                 </div>
+                <div className={styles["cover"]}></div>
                 <div className={`${styles['navItem']} ${styles['projects']}`}>
                     <NavLink className={({ isActive }) => (isActive ? `${styles['NavLink']} ${styles['active']}` : `${styles['NavLink']} ${styles['inactive']}`)} to="/">
                         Projects
