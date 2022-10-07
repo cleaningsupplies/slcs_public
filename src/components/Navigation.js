@@ -19,7 +19,7 @@ export default function Navigation() {
     function checkSize(){
         const navbar_id = document.querySelector("#navbar");
 
-        if(window.innerWidth >= 1146){
+        if(window.innerWidth > 1146){
             navbar_id.className = navbar;
         }
     }
@@ -35,20 +35,19 @@ export default function Navigation() {
     }
 
  
-    window.addEventListener("resize", checkSize());
-    checkSize();
+    window.addEventListener("resize", () => { checkSize() });
 
-    // document.addEventListener("click", (e) => {
-    //     e = e || window.event;
-    //     let target = e.target || e.srcElement;
-    //     const navbar_id = document.querySelector("#navbar");
 
-      
-    //     if(navbar_id.className === navbar_responsive && target.className != navbar_responsive && target.className != menu){
-    //         openNavMenu();
-    //     }
+    document.addEventListener("click", (e) => {
 
-    // }, false);
+        const navbar_id = document.querySelector("#navbar");
+
+        if(navbar_id.className === navbar_responsive && e.target.className === menu || e.target.tagName === "svg" || e.target.tagName === "path"){
+
+        }else{
+            navbar_id.className = navbar;
+        }
+    })
 
 
   return (
