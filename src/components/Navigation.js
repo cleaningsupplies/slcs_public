@@ -42,7 +42,7 @@ export default function Navigation() {
 
         const navbar_id = document.querySelector("#navbar");
 
-        if(navbar_id.className === navbar_responsive && e.target.className === menu || e.target.tagName === "svg" || e.target.tagName === "path"){
+        if(navbar_id.className === navbar_responsive && (e.target.className === menu || e.target.tagName === "svg" || e.target.tagName === "path")){
 
         }else{
             navbar_id.className = navbar;
@@ -54,8 +54,8 @@ export default function Navigation() {
     <>
         <BrowserRouter className={styles["navigation"]}>
             <div id="navbar" className={styles["navbar"]}>
-                <div href="javascript:void(0);" className={styles['menu']} onClick={openNavMenu}>
-                        <FontAwesomeIcon icon={faBars} />
+                <div className={styles['menu']} onClick={openNavMenu}>
+                    <FontAwesomeIcon icon={faBars} />
                 </div>
                 <div className={styles["cover"]}></div>
                 <div className={`${styles['navItem']} ${styles['projects']}`}>
