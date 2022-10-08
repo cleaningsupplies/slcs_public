@@ -45,7 +45,7 @@
     display: none;
 }
 
-@media only screen and (max-width: 1130px) {
+@media only screen and (max-width: 1326px) {
     /* show hamburger and hide default navItems*/
     .menu {
         float: right;

@@ -19,7 +19,7 @@ export default function Navigation() {
     function checkSize(){
         const navbar_id = document.querySelector("#navbar");
 
-        if(window.innerWidth > 1146){
+        if(window.innerWidth > 1326){
             navbar_id.className = navbar;
         }
     }

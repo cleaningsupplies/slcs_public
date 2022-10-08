@@ -27,6 +27,7 @@ export default function Projects() {
           with a passion for UX/UI Design.
       </div>
       <table className={styles['projects_container']}>
+      <tbody>
           <tr>
             <td className={styles['rose']}>
               <img className={styles['todo']} src={require("../img/todo.png")} alt="todo app"></img>
@@ -45,9 +46,11 @@ export default function Projects() {
             <td className={styles['grey']}></td>
             <td className={styles['turquoise']}></td>
           </tr>
+      </tbody>
       </table>
 
       <table className={styles['overlay_container']}>
+      <tbody>
           <tr>
             <td id={styles['_1']} onClick={() => openProject('todo')}>
                 <span className={`${styles['project']} ${styles['title']}`}>Todo App</span><br></br>
@@ -70,6 +73,7 @@ export default function Projects() {
             <td id={styles["_5"]}></td>
             <td id={styles["_6"]}></td>
           </tr>
+      </tbody>
       </table>
     </div>
       
