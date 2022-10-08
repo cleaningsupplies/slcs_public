@@ -1,15 +1,16 @@
 @import url(styles.css);
 
-.projects{
-    width: 100%;
-}
+.projects{ width: 100%; }
 
 .intro{
     font-family: var(--font_montserrat);
-    padding: 4vh 2vw 4vh 6vw;
+    padding: 4vh 4vw 4vh 6vw;
     height: 20vh;
     display: flex;
+    align-items: center;
 }
+
+.container_responsive{ display: none; }
 
 .projects_container{
     text-align: center;
@@ -26,6 +27,12 @@ td{
     width: 30%;
 }
 
+img{
+    width: 70%;
+    display: block;
+    margin: auto;
+}
+
 .overlay_container{
     position: absolute;
     bottom: 0;
@@ -34,11 +41,85 @@ td{
     border-spacing: 0;
 }
 
-img{
-    width: 70%;
-    display: block;
-    margin: auto;
+
+
+.project{
+    padding-left: 5%;
+    visibility: hidden;
+    color: white;
 }
+
+.title{
+    font-weight: bold;
+}
+
+.description{
+    font-family: var(--font_montserrat);
+    font-size: 3vh;
+}
+
+@media only screen and (max-width: 1326px) {
+    .container{
+        display: none;
+    }
+
+    .container_responsive{
+        display: block;
+    }
+
+    .intro{
+        padding: 4vh 4vw 4vh 6vw;
+        height: 22vh;
+        width: 80vw;
+    }
+
+    .projects_container_responsive{
+        text-align: center;
+        height: 58vh;
+        width: 100%;
+        border-spacing: 0;
+    }
+
+    td{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img{
+        width: 48vw;
+    }
+
+    .overlay_container_responsive{
+        position: absolute;
+        height: 58vh;
+        width: 100%;
+        top: 44vh;
+        border-spacing: 0;
+    }
+
+    .targetCell{
+        height: 50vh;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 900px) {
+    img{
+        width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    img{
+        width: 80vw;
+    }
+}
+
 
 .rose{
     background-color: var(--primary_rose);
@@ -55,6 +136,8 @@ img{
 .grey{
     background-color: var(--primary_grey);
 }
+
+
 
 #_1:hover{
     background-color: #dec4c0c0;
@@ -90,25 +173,6 @@ img{
 
 #_4:hover .project{
     visibility: visible;
-}
-
-.project{
-    padding-left: 5%;
-    visibility: hidden;
-    color: white;
-}
-
-.title{
-    font-weight: bold;
-}
-
-.description{
-    font-family: var(--font_montserrat);
-    font-size: 3vh;
-}
-
-@media only screen and (max-width: 1130px) {
-
 }
 
 
