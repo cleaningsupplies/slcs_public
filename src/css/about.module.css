@@ -51,31 +51,94 @@
 }
 
 .image_container{
-    width: 40vw;
     height: 100%;
+    width: 40vw;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
 .image{
-    color: transparent;
-    height: 90%;
     width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     background-image: url("../img/profile_img.png");
-    background-position: center;
+    background-size: cover;                      
     background-repeat: no-repeat;
+    background-position: center center; 
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
 
-.profile{
-    border-radius: 10px;
-    height: 60vh;
-    width: auto;
-    float: left;
+
+@media only screen and (max-width: 960px) {
+
+    .about{
+        height: 150vh;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .container{
+        height: 100%;
+        width: 100%;
+        background-color: var(--primary_rose);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .text_container{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .image_container{
+        height: 45%;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .image{
+        width: 100%;
+        height: 100%;
+        background-image: url("../img/profile_img.png");
+        background-size: cover;                      
+        background-repeat: no-repeat;
+        background-position: center center; 
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
 }
 
-@media only screen and (max-width: 1130px) {
+@media only screen and (max-width: 660px) {
+    .text_container{
+        height: 60%;
+    }
 
+    .image_container{
+        height: 38%;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+
+    .text_container{
+        height: 73%;
+    }
+
+    .image_container{
+        height: 25%;
+    }
 }

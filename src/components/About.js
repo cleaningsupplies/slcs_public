@@ -15,7 +15,6 @@ export default function About() {
               <br></br>
               <br></br>
               <br></br>
-              <br></br>
               My name is Stephanie. I'm a 28 year-old junior front end developer from Hamburg, Germany. 
               <br></br>
               <br></br>
@@ -26,13 +25,12 @@ export default function About() {
               Ever since, I missed programming and now I'm back on track programming and constantly learning new things as a junior front end developer.
               <br></br>
               <br></br>
-              <br></br>
               <a href="/contact" className={styles["link"]}>Let's get in touch &#8594;</a>
           </div>
         </div>
         <div className={styles["image_container"]}>
           <div className={styles["image"]}></div>
-        </div> 
+        </div>
       </div>
     </div>
   )
