@@ -30,6 +30,22 @@
     border: none;
 }
 
-@media only screen and (max-width: 1130px) {
+@media only screen and (max-width: 1100px) {
+    .contact{
+        flex-direction: column;
+        height: 100vh;
+    }
 
+    .intro{
+        height: 25%;
+        width: 100%;
+        
+    }
+
+    .text{
+        font-size: 4vh;
+        width: 100%;
+        text-align: center;
+        padding: 2%;
+    }
 }

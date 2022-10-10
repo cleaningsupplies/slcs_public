@@ -5,7 +5,7 @@ import styles from "../css/contactForm.module.css";
 export default function ContactForm() {
 
     const [status, setStatus] = useState("Send");
-    const [sent, setSent] = useState("Your message was successfully sent.");
+    const [sent, setSent] = useState("Your message was successfully sent!");
 
     async function handleSubmit(e){
       e.preventDefault();
@@ -47,7 +47,7 @@ export default function ContactForm() {
     return (
       <div className={styles["container"]}>
         <div className={styles["formContainer"]}>
-        <div id="sent" className={styles["sent"]}>{sent}</div>
+        
           <form id="form" className={styles["form"]} onSubmit={handleSubmit}>
             <label id="n" htmlFor='name'>Name</label>
             <input id="name" className={styles["name"]} placeholder="Name" type="text" tabIndex="12" required></input>
@@ -56,7 +56,8 @@ export default function ContactForm() {
             <label id="m" htmlFor='message'>Message</label>
             <textarea id="message" className={styles["message"]} placeholder="Message" type="text" tabIndex="14" required></textarea>
             <div className={styles["button_container"]}>
-             <button className={styles["submit"]} type="Submit">{status}</button>
+              <div id="sent" className={styles["sent"]}>{sent}</div>
+              <button className={styles["submit"]} type="Submit">{status}</button>
             </div>
           </form>
         </div>
