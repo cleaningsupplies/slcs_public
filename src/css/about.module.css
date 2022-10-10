@@ -29,10 +29,11 @@
     font-family: var(--font_georgia);
     font-size: 5vh;
     color: var(--secondary_rose);
+    font-style: normal;
 }
 
 .description{
-    font-size: 2.8vh;
+    font-size: 3vh;
     font-family: var(--font_montserrat);
     text-align: justify;
     font-weight: 450;
@@ -42,12 +43,13 @@
 .link{
     font-weight: 550;
     text-decoration: none;
-    color: var(--base_font_color);
+    color: var(--secondary_rose);
+    font-family: var(--font_georgia);
 }
 
 .link:hover{
     cursor: pointer;
-    color: var(--secondary_rose);
+    color: var(--secondary_turquoise);
 }
 
 .image_container{

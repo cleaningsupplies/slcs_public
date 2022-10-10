@@ -91,7 +91,7 @@
 }
 
 .submit{
-    width: 20%;
+    width: 30%;
     height: 4vh;
     background-color: var(--secondary_rose);
     border: none;
@@ -119,14 +119,6 @@
 
     .form > input, .form > textarea{
         margin-bottom: 3vh;
-    }
-
-}
-
-@media only screen and (max-width: 600px) {
-
-    .submit{
-        width: 30%;
     }
 }
 

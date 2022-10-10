@@ -10,7 +10,6 @@
     align-items: center;
 }
 
-
 .icons{
     position: absolute;
     width: 100%;
@@ -42,6 +41,7 @@
     text-decoration: none;
     color: var(--primary_turquoise);
     font-size: 3vh;
+    font-weight: 450;
     padding: 10%;
     font-family: var(--font_montserrat);
 }
