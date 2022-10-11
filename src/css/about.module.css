@@ -29,7 +29,7 @@
     font-family: var(--font_georgia);
     font-size: 5vh;
     color: var(--secondary_rose);
-    font-style: normal;
+    font-style: italic;
 }
 
 .description{
@@ -45,11 +45,14 @@
     text-decoration: none;
     color: var(--secondary_rose);
     font-family: var(--font_georgia);
+    transition: 0.7s;
+    font-style: italic;
 }
 
 .link:hover{
     cursor: pointer;
     color: var(--secondary_turquoise);
+    transition: 0.7s;
 }
 
 .image_container{

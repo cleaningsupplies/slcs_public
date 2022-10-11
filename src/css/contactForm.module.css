@@ -19,13 +19,6 @@
     flex-direction: column;
 }
 
-.intro{
-    font-family: var(--font_georgia);
-    font-size: 5vh;
-    height: 15vh;
-    color: var(--secondary_turquoise);
-}
-
 .form{
     width: 100%;
     height: 90%;
@@ -101,10 +94,12 @@
     font-weight: 600;
     color: var(--base_bg_color);
     font-family: var(--font_montserrat);
+    transition: 0.7s;
 }
 
 .submit:hover{
     background-color: var(--primary_rose);
+    transition: 0.7s;
 }
 
 @media only screen and (max-width: 1100px) {

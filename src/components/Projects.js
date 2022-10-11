@@ -52,26 +52,26 @@ export default function Projects() {
         <table className={styles['overlay_container']}>
           <tbody>
               <tr>
-                <td id={styles['_1']} onClick={() => openProject('todo')}>
+                <td className={styles['fade']} id={styles['_1']} onClick={() => openProject('todo')}>
                     <span className={`${styles['project']} ${styles['title']}`}>Todo App</span><br></br>
                     <span className={`${styles['project']} ${styles['description']}`}>ReactJS, MySQL/LocalStorage</span>
                 </td>
-                <td id={styles["_2"]} onClick={() => openProject('weather')}>
+                <td className={styles['fade']} id={styles["_2"]} onClick={() => openProject('weather')}>
                     <span className={`${styles['project']} ${styles['title']}`}>Weather App</span><br></br>
                     <span className={`${styles['project']} ${styles['description']}`}>ReactJS, OpenWeatherMap API</span>
                 </td>
-                <td id={styles["_3"]} onClick={() => openProject('noodlee')}>
+                <td className={styles['fade']} id={styles["_3"]} onClick={() => openProject('noodlee')}>
                     <span className={`${styles['project']} ${styles['title']}`}>Noodlee</span><br></br>
                     <span className={`${styles['project']} ${styles['description']}`}>VanillaJS, Leaflet/OpenStreetMap</span>
                 </td>
               </tr>
               <tr>
-                <td id={styles["_4"]}>
+                <td className={styles['fade']} id={styles["_4"]}>
                     <span className={`${styles['project']} ${styles['title']}`}>Portfolio</span><br></br>
                     <span className={`${styles['project']} ${styles['description']}`}>React, NodeJS</span>
                 </td>
-                <td id={styles["_5"]}></td>
-                <td id={styles["_6"]}></td>
+                <td className={styles['fade']} id={styles["_5"]}></td>
+                <td className={styles['fade']} id={styles["_6"]}></td>
               </tr>
           </tbody>
         </table>
@@ -112,34 +112,34 @@ export default function Projects() {
         <table className={styles['overlay_container_responsive']}>
           <tbody>
               <tr>
-                <td id={styles['_1']} className={styles["targetCell"]} onClick={() => openProject('todo')}>
+                <td className={styles['fade']} id={styles['_1']} onClick={() => openProject('todo')}>
                     <span className={`${styles['project']} ${styles['title']}`}>Todo App</span><br></br>
                     <span className={`${styles['project']} ${styles['description']}`}>ReactJS, MySQL/LocalStorage</span>
                 </td>
               </tr>
               <tr>
-                <td id={styles["_2"]} className={styles["targetCell"]} onClick={() => openProject('weather')}>
+                <td className={styles['fade']} id={styles["_2"]} onClick={() => openProject('weather')}>
                     <span className={`${styles['project']} ${styles['title']}`}>Weather App</span><br></br>
                     <span className={`${styles['project']} ${styles['description']}`}>ReactJS, OpenWeatherMap API</span>
                 </td>
               </tr>
               <tr>
-                <td id={styles["_3"]} onClick={() => openProject('noodlee')}>
+                <td className={styles['fade']} id={styles["_3"]} onClick={() => openProject('noodlee')}>
                     <span className={`${styles['project']} ${styles['title']}`}>Noodlee</span><br></br>
                     <span className={`${styles['project']} ${styles['description']}`}>VanillaJS, Leaflet/OpenStreetMap</span>
                 </td>
               </tr>
               <tr>
-                <td id={styles["_4"]}>
+                <td className={styles['fade']} id={styles["_4"]}>
                     <span className={`${styles['project']} ${styles['title']}`}>Portfolio</span><br></br>
                     <span className={`${styles['project']} ${styles['description']}`}>React, NodeJS</span>
                 </td>
               </tr>
               {/* <tr>
-                <td id={styles["_5"]}></td>
+                <td className={styles['fade']} id={styles["_5"]}></td>
               </tr>
               <tr>
-                <td id={styles["_6"]}></td>
+                <td className={styles['fade']} id={styles["_6"]}></td>
               </tr> */}
           </tbody> 
         </table>

@@ -41,8 +41,6 @@ img{
     border-spacing: 0;
 }
 
-
-
 .project{
     padding-left: 5%;
     visibility: hidden;
@@ -51,6 +49,7 @@ img{
 
 .title{
     font-weight: bold;
+    font-style: italic;
 }
 
 .description{
@@ -104,8 +103,6 @@ img{
         height: 50vh;
     }
 
-
-
 }
 
 @media only screen and (max-width: 900px) {
@@ -138,10 +135,15 @@ img{
 }
 
 
+.fade{
+    opacity: 0;
+    transition: 0.4s;
+}
 
 #_1:hover{
     background-color: #dec4c0c0;
     cursor: pointer;
+    opacity: 1;
 }
 
 #_1:hover .project{
@@ -151,6 +153,7 @@ img{
 #_2:hover{
     background-color: #BAD4D7c0;
     cursor: pointer;
+    opacity: 1;
 }
 
 #_2:hover .project{
@@ -160,6 +163,7 @@ img{
 #_3:hover{
     background-color: #67898Dc0;
     cursor: pointer;
+    opacity: 1;
 }
 
 #_3:hover .project{
@@ -169,6 +173,7 @@ img{
 #_4:hover{
     background-color: #BAD4D7c0;
     cursor: pointer;
+    opacity: 1;
 }
 
 #_4:hover .project{

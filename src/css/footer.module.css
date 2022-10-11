@@ -44,10 +44,12 @@
     font-weight: 450;
     padding: 10%;
     font-family: var(--font_montserrat);
+    transition: 0.5s;
 }
 
 .navItem:hover, .linkedIn:hover, .github:hover, .instagram:hover{
     color: var(--primary_rose);
+    transition: 0.5s;
 }
 
 .copyright{

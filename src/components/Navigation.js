@@ -5,8 +5,7 @@ import Contact from "../components/Contact";
 import Projects from '../components/Projects';
 import styles from "../css/navigation.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Navigation() {
@@ -14,13 +13,32 @@ export default function Navigation() {
     const navbar = `${styles["navbar"]}`;
     const navbar_responsive = `${styles["navbar_responsive"]}`;
     const menu = `${styles['menu']}`;
+    const close = `${styles['close']}`;
+
+    const strings = {
+        projects : "Projects",
+        about: "About",
+        contact: "Contact"
+    }
 
 
     function checkSize(){
         const navbar_id = document.querySelector("#navbar");
 
+        console.log(navbar_id.className, window.innerWidth)
+
         if(window.innerWidth > 1326){
             navbar_id.className = navbar;
+            document.querySelector(`.${menu}`).style.display = "none";
+            document.querySelector(`.${close}`).style.display = "none";
+        }else{
+            if(navbar_id.className === navbar_responsive){
+                document.querySelector(`.${menu}`).style.display = "none";
+                document.querySelector(`.${close}`).style.display = "block";
+            }else{
+                document.querySelector(`.${menu}`).style.display = "block";
+                document.querySelector(`.${close}`).style.display = "none";
+            }
         }
     }
 
@@ -29,8 +47,12 @@ export default function Navigation() {
 
         if(navbar_id.className === navbar_responsive){
             navbar_id.className = navbar;
+            document.querySelector(`.${close}`).style.display = "none";
+            document.querySelector(`.${menu}`).style.display = "block";
         }else{
             navbar_id.className = navbar_responsive;
+            document.querySelector(`.${close}`).style.display = "block";
+            document.querySelector(`.${menu}`).style.display = "none";
         }
     }
 
@@ -42,9 +64,13 @@ export default function Navigation() {
 
         const navbar_id = document.querySelector("#navbar");
 
-        if(navbar_id.className === navbar_responsive && (e.target.className === menu || e.target.tagName === "svg" || e.target.tagName === "path")){
+        if(navbar_id.className === navbar_responsive && (e.target.className === menu || e.target.className === close || e.target.tagName === "svg" || e.target.tagName === "path")){
 
         }else{
+            if( navbar_id.className === navbar_responsive){
+                document.querySelector(`.${close}`).style.display = "none";
+                document.querySelector(`.${menu}`).style.display = "block";
+            }
             navbar_id.className = navbar;
         }
     })
@@ -57,20 +83,23 @@ export default function Navigation() {
                 <div className={styles['menu']} onClick={openNavMenu}>
                     <FontAwesomeIcon icon={faBars} />
                 </div>
+                <div className={styles['close']} onClick={openNavMenu}>
+                    <FontAwesomeIcon icon={faXmark} />
+                </div>
                 <div className={styles["cover"]}></div>
                 <div className={`${styles['navItem']} ${styles['projects']}`}>
                     <NavLink className={({ isActive }) => (isActive ? `${styles['NavLink']} ${styles['active']}` : `${styles['NavLink']} ${styles['inactive']}`)} to="/">
-                        Projects
+                        {strings.projects}
                     </NavLink>
                 </div>
                 <div className={`${styles['navItem']} ${styles['about']}`}>
                     <NavLink className={({ isActive }) => (isActive ? `${styles['NavLink']} ${styles['active']}` : `${styles['NavLink']} ${styles['inactive']}`)} to="/about">
-                        About
+                        {strings.about}
                     </NavLink>
                 </div>
                 <div className={`${styles['navItem']} ${styles['contact']}`}>
                     <NavLink className={({ isActive }) => (isActive ? `${styles['NavLink']} ${styles['active']}` : `${styles['NavLink']} ${styles['inactive']}`)} to="/contact">
-                        Contact
+                        {strings.contact}
                     </NavLink>
                 </div>
                 
