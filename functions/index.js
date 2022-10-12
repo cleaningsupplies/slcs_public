@@ -1,6 +1,6 @@
 const functions = require("firebase-functions");
 
-const config = require("../public/server/config/index.js")
+const config = require("./config.txt")
 const cors = require("cors");
 const express = require("express");
 const nodemailer = require("nodemailer");
@@ -16,6 +16,10 @@ app.use("/", router);
 app.get('/contact/sendForm', (req, res) => {
   res.send('Hello World!')
 })
+
+//https://academind.com/tutorials/sending-an-email-with-react-and-cloud-functions#deploying-the-cloud-function
+//https://javascript.plainenglish.io/hosting-your-react-js-and-node-js-apps-for-free-with-firebase-6dc670564aca
+//https://blog.logrocket.com/8-ways-deploy-react-app-free/#firebase
 
 // app.post('/contact/sendForm', (req, res) => {
 //   res.send(req.body)
