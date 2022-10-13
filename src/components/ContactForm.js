@@ -59,7 +59,6 @@ export default function ContactForm() {
               <button className={styles["submit"]} type="Submit">{status}</button>
             </div>
           </form> */}
-
           <form id="form" className={styles["form"]} name="contact/sent" action="/contact/sent" method="post">
             <input type="hidden" name="form-name" value="contact/sent"></input>
             <label id="n" htmlFor='name'>Name</label>
