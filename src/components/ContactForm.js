@@ -65,33 +65,3 @@ export default function ContactForm() {
       
     )
 }
-
-
-    //https://ciunkos.com/creating-contact-forms-with-nodemailer-and-react
-    //https://github.com/Ciunkos/creating-contact-forms-with-nodemailer-and-react/tree/master/src
-    //https://w3collective.com/react-contact-form/
-
-      /*
-      let response = await fetch("http://localhost:3000/contact/hi", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json;charset=utf-8",
-        },
-        body: JSON.stringify(details),
-      });
-      //setStatus("Submit");
-      let result = await response.json();
-      console.log(result);
-      */
-
-
-          //   const inputVal = inputRef.current.value;
-    //   console.log(inputVal)
-    //   e.preventDefault();
-    //   axios.post('http://localhost:3000/contact/hi', JSON.stringify(details))
-    //   .then(function (response) {
-    //     console.log(response);
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error);
-    //   });
