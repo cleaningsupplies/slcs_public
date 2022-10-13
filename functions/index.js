@@ -21,10 +21,6 @@ app.get('/contact/sendForm', (req, res) => {
 //https://javascript.plainenglish.io/hosting-your-react-js-and-node-js-apps-for-free-with-firebase-6dc670564aca
 //https://blog.logrocket.com/8-ways-deploy-react-app-free/#firebase
 
-// app.post('/contact/sendForm', (req, res) => {
-//   res.send(req.body)
-// })
-
 app.listen(port, () => {
   console.log(`Listening on port: ${port}`)
 });
@@ -69,49 +65,3 @@ router.post("/contact/sendForm", (req, res) => {
 });
 
 exports.api = functions.https.onRequest(app);
-
-/*
-const express = require('express');
-const bodyParser = require("body-parser");
-
-const mailer = require("./mailer")
-
-const app = express()
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
-
-app.get('/', (req, res) => {
-  res.send('Server is working. Please post at "/contact" to submit a message.')
-})
-
-app.post('/contact', (req, res) => {
-  const { email = '', name = '', message = '' } = req.body
-
-  mailer({ email, name, text: message }).then(() => {
-    console.log(`Sent the message "${message}" from <${name}> ${email}.`);
-    res.redirect('/#success');
-  }).catch((error) => {
-    console.log(`Failed to send the message "${message}" from <${name}> ${email} with the error ${error && error.message}`);
-    res.redirect('/#error');
-  })
-})
-
-
-
-const PORT = 3000;
-
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
-})
-
-*/
-
-
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });

@@ -11,6 +11,10 @@ app.use(cors());
 app.use(express.json());
 app.use("/", router);
 
+//https://academind.com/tutorials/sending-an-email-with-react-and-cloud-functions#deploying-the-cloud-function
+//https://javascript.plainenglish.io/hosting-your-react-js-and-node-js-apps-for-free-with-firebase-6dc670564aca
+//https://blog.logrocket.com/8-ways-deploy-react-app-free/#firebase
+
 app.get('/contact/sendForm', (req, res) => {
   res.send('Hello World!')
 })
