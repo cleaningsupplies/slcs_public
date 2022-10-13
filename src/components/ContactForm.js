@@ -62,7 +62,7 @@ export default function ContactForm() {
           <form id="form" className={styles["form"]} name="contact" action="/contact" method="post">
             <input type="hidden" name="form-name" value="contact"></input>
             <label id="n" htmlFor='name'>Name</label>
-            <input id="name" name="name" className={styles["name"]} placeholder="NameOLL" type="text" required></input>
+            <input id="name" name="name" className={styles["name"]} placeholder="Name" type="text" required></input>
             <label id="e" htmlFor='email'>E-Mail address</label>
             <input id="email" name="email" className={styles["email"]} placeholder="E-Mail address" type="email" required></input>
             <label id="m" htmlFor='message'>Message</label>
