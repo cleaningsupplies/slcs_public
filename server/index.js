@@ -1,4 +1,4 @@
-const config = require("./config/index.js")
+const config = require("./config.txt")
 const cors = require("cors");
 const express = require("express");
 const nodemailer = require("nodemailer");
@@ -19,9 +19,6 @@ app.get('/contact/sendForm', (req, res) => {
   res.send('Hello World!')
 })
 
-// app.post('/contact/sendForm', (req, res) => {
-//   res.send(req.body)
-// })
 
 app.listen(port, () => {
   console.log(`Listening on port: ${port}`)
