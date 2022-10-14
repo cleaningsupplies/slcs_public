@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from "../css/contact.module.css";
+import styles from "../css/success.module.css";
 import ContactForm from './ContactForm';
 
 export default function success() {
 
   return (
     <>
-      <p>hi :)</p>
+      <div className={styles["container"]}>hi :)</div>
     </>
     
   )
