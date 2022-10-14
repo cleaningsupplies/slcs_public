@@ -55,7 +55,7 @@ export default function ContactForm() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => navigate('/success'))
+      .then(() => navigate('/about'))
       .catch((error) => alert(error));
   }
 
