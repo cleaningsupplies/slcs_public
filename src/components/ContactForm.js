@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import styles from "../css/contactForm.module.css";
+import { useNavigate } from 'react-router-dom';
 
 export default function ContactForm() {
 
@@ -44,7 +45,7 @@ export default function ContactForm() {
       setTimeout(()=> userFeedback.style.visibility = "hidden", 4000);
     }
 
-    let navigate = useNavigate()
+    let navigate = useNavigate();
   const submitHandler = (e) =>{
     e.preventDefault();
     let myForm = document.getElementById("form");
