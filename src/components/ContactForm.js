@@ -73,9 +73,9 @@ export default function ContactForm() {
               <button className={styles["submit"]} type="Submit">{status}</button>
             </div>
           </form> */}
-          <form id="form" className={styles["form"]} name="contact" onClick={submitHandler} method="POST">
+          <form id="form" className={styles["form"]} name="contact" onSubmit={submitHandler} method="POST">
             <input type="hidden" name="form-name" value="contact"></input>
-            <label id="n" htmlFor='name'>NameYY</label>
+            <label id="n" htmlFor='name'>Name</label>
             <input id="name" name="name" className={styles["name"]} placeholder="Name" type="text" required></input>
             <label id="e" htmlFor='email'>E-Mail address</label>
             <input id="email" name="email" className={styles["email"]} placeholder="E-Mail address" type="email" required></input>
