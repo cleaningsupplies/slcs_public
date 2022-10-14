@@ -6,7 +6,18 @@ export default function Contact() {
 
   return (
     <>
-      <p>done</p>
+      <div className={styles["contact"]}>
+        <div className={styles["intro"]}>
+          <div className={styles["text"]}>
+            You have a question or just want to chat?
+            <br></br>
+            <br></br>
+            I'd be happy to hear from you!
+          </div>
+        </div>
+        <ContactForm />
+      </div>
+      <hr className={styles["hr"]}></hr>
     </>
     
   )
