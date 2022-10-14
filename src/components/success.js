@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from "../css/success.module.css";
-import ContactForm from './ContactForm';
 
-export default function success() {
+export default function Success() {
 
   return (
     <>

@@ -109,6 +109,7 @@ export default function Navigation() {
                 <Route exact path="/" element={<Projects />} />
                 <Route exact path="/about" element={<About />} />
                 <Route exact path="/contact" element={<Contact />} />
+                <Route exact path="/success" element={<Success />} />
             </Routes>
         </BrowserRouter>
     </>
