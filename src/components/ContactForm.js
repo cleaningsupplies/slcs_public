@@ -44,6 +44,20 @@ export default function ContactForm() {
       setTimeout(()=> userFeedback.style.visibility = "hidden", 4000);
     }
 
+    let navigate = useNavigate()
+  const submitHandler = (e) =>{
+    e.preventDefault();
+    let myForm = document.getElementById("form");
+    let formData = new FormData(myForm);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => navigate('/success'))
+      .catch((error) => alert(error));
+  }
+
     return (
       <div className={styles["container"]}>
         <div className={styles["formContainer"]}>
@@ -59,7 +73,7 @@ export default function ContactForm() {
               <button className={styles["submit"]} type="Submit">{status}</button>
             </div>
           </form> */}
-          <form id="form" className={styles["form"]} name="contact" action="/" method="POST">
+          <form id="form" className={styles["form"]} name="contact" onClick={submitHandler} method="POST">
             <input type="hidden" name="form-name" value="contact"></input>
             <label id="n" htmlFor='name'>NameYY</label>
             <input id="name" name="name" className={styles["name"]} placeholder="Name" type="text" required></input>
