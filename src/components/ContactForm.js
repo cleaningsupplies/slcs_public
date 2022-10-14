@@ -59,7 +59,7 @@ export default function ContactForm() {
               <button className={styles["submit"]} type="Submit">{status}</button>
             </div>
           </form> */}
-          <form id="form" className={styles["form"]} name="contact" action="/contact" method="post">
+          <form id="form" className={styles["form"]} name="contact" action="/success" method="POST">
             <input type="hidden" name="form-name" value="contact"></input>
             <label id="n" htmlFor='name'>Name</label>
             <input id="name" name="name" className={styles["name"]} placeholder="Name" type="text" required></input>
@@ -72,6 +72,8 @@ export default function ContactForm() {
               <button className={styles["submit"]} type="Submit">{status}</button>
             </div>
           </form>
+
+          {/* https://answers.netlify.com/t/how-can-i-prevent-to-show-your-form-submission-has-been-received-page-when-form-submitted/52762 */}
         </div>
       </div>
       
