@@ -4,7 +4,7 @@ export default function ContactForm() {
 
     return (
       <div>
-        thanks
+        Thank you
       </div>
       
     )
