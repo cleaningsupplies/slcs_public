@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Projects from '../components/Projects';
-import Success from '../components/Success';
+import Success from './success';
 import styles from "../css/navigation.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';

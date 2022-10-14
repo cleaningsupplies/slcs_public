@@ -46,18 +46,18 @@ export default function ContactForm() {
     }
 
     let navigate = useNavigate();
-  const submitHandler = (e) =>{
-    e.preventDefault();
-    let myForm = document.getElementById("form");
-    let formData = new FormData(myForm);
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => navigate('/success'))
-      .catch((error) => alert(error));
-  }
+    const submitHandler = (e) =>{
+      e.preventDefault();
+      let myForm = document.getElementById("form");
+      let formData = new FormData(myForm);
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then(() => navigate('/success'))
+        .catch((error) => alert(error));
+    }
 
     return (
       <div className={styles["container"]}>
