@@ -71,8 +71,8 @@ export default function ContactForm() {
     return (
       <div className={styles["container"]}>
         <div className={styles["formContainer"]}>
-          <form id="form" className={styles["form"]} name="SLCS" onSubmit={submitHandler} method="POST">
-            <input type="hidden" name="form-name" value="SLCS"></input>
+          <form id="form" className={styles["form"]} name="contact" onSubmit={submitHandler}>
+            <input type="hidden" name="form-name" value="contact"></input>
             <label id="n" htmlFor='name'>Name</label>
             <input id="name" name="name" className={styles["name"]} placeholder="Name" type="text" required></input>
             <label id="e" htmlFor='email'>E-Mail address</label>
