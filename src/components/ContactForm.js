@@ -65,7 +65,7 @@ export default function ContactForm() {
       )
       .catch((error) => alert("I'm sorry, something did't work! Why don't you contact me via LinkedIn for now? :) Thank you!"));
 
-      setTimeout(()=> userFeedback.style.visibility = "hidden", 2000);
+      setTimeout(()=> userFeedback.style.visibility = "hidden", 5000);
     }
 
     return (

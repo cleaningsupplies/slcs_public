@@ -140,10 +140,14 @@
 @media only screen and (max-width: 500px) {
 
     .text_container{
-        height: 73%;
+        height: 68%;
     }
 
     .image_container{
-        height: 25%;
+        height: 30%;
+    }
+
+    .description{
+        font-size: 2.71vh;
     }
 }
