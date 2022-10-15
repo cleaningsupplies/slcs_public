@@ -10,7 +10,10 @@
     align-items: center;
 }
 
-.container_responsive{ display: none; }
+.container_responsive{ 
+    width: 100%;
+    display: none; 
+}
 
 .projects_container{
     text-align: center;
@@ -42,9 +45,9 @@ img{
 }
 
 .project{
-    padding-left: 5%;
     visibility: hidden;
     color: white;
+    margin: 2%;
 }
 
 .title{
@@ -64,6 +67,7 @@ img{
 
     .container_responsive{
         display: block;
+        max-width: 100vw;
     }
 
     .intro{
@@ -80,7 +84,7 @@ img{
     }
 
     td{
-        width: 100vw;
+        width: 99.7%;
         height: 50vh;
         display: flex;
         justify-content: center;
@@ -94,7 +98,7 @@ img{
     .overlay_container_responsive{
         position: absolute;
         height: 58vh;
-        max-width: 100%;
+        width: 100%;
         top: 44vh;
         border-spacing: 0;
     }
