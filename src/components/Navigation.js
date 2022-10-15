@@ -4,7 +4,7 @@ import About from "../components/About";
 import Contact from "../components/Contact";
 import Projects from '../components/Projects';
 // import Success from './success';
-import Success from "../components/Success"
+//import Success from "../components/Success"
 import styles from "../css/navigation.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -111,7 +111,7 @@ export default function Navigation() {
                 <Route exact path="/" element={<Projects />} />
                 <Route exact path="/about" element={<About />} />
                 <Route exact path="/contact" element={<Contact />} />
-                <Route exact path="/success" element={<Success />} />
+                {/* <Route exact path="/success" element={<Success />} /> */}
             </Routes>
         </BrowserRouter>
     </>
