@@ -46,19 +46,27 @@ export default function ContactForm() {
     //   setTimeout(()=> userFeedback.style.visibility = "hidden", 4000);
     // }
 
-    let navigate = useNavigate();
     const submitHandler = (e) =>{
       e.preventDefault();
       setStatus("Sending...");
-      let myForm = document.getElementById("form");
-      let formData = new FormData(myForm);
+      const form = document.querySelector("#form");
+      const userFeedback = document.querySelector("#sent");
+      let formData = new FormData(form);
+      
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString(),
       })
-        .then(() => alert('/success'))
-        .catch((error) => alert(error));
+      .then(() => {
+          userFeedback.style.visibility = "visible";
+          form.reset();
+          setStatus("Send");
+        }
+      )
+      .catch((error) => alert(error));
+
+      setTimeout(()=> userFeedback.style.visibility = "hidden", 4000);
     }
 
     return (
