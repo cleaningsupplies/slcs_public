@@ -80,7 +80,7 @@ img{
     }
 
     td{
-        width: 100%;
+        width: 100vw;
         height: 50vh;
         display: flex;
         justify-content: center;
@@ -94,7 +94,7 @@ img{
     .overlay_container_responsive{
         position: absolute;
         height: 58vh;
-        width: 100%;
+        max-width: 100%;
         top: 44vh;
         border-spacing: 0;
     }

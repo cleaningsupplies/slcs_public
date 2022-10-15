@@ -15,9 +15,6 @@ export default function Projects() {
     window.open(url, '_blank');
   }
 
-
-
- 
   return (
     <div className={styles["projects"]}>
       <div className={styles['intro']}>
