@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 // import axios from 'axios';
 import styles from "../css/contactForm.module.css";
-import { useNavigate } from 'react-router-dom';
 
 export default function ContactForm() {
 
@@ -64,16 +63,16 @@ export default function ContactForm() {
           setStatus("Send");
         }
       )
-      .catch((error) => alert(error));
+      .catch((error) => alert("I'm sorry, something did't work! Why don't you contact me via LinkedIn for now? :) Thank you!"));
 
-      setTimeout(()=> userFeedback.style.visibility = "hidden", 4000);
+      setTimeout(()=> userFeedback.style.visibility = "hidden", 3000);
     }
 
     return (
       <div className={styles["container"]}>
         <div className={styles["formContainer"]}>
-          <form id="form" className={styles["form"]} name="contact" onSubmit={submitHandler} method="POST">
-            <input type="hidden" name="form-name" value="contact"></input>
+          <form id="form" className={styles["form"]} name="SLCS" onSubmit={submitHandler} method="POST">
+            <input type="hidden" name="form-name" value="SLCS"></input>
             <label id="n" htmlFor='name'>Name</label>
             <input id="name" name="name" className={styles["name"]} placeholder="Name" type="text" required></input>
             <label id="e" htmlFor='email'>E-Mail address</label>
