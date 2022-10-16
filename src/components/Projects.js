@@ -10,6 +10,7 @@ export default function Projects() {
       case "todo": url = "https://cleaningsupplies.github.io/todo_public/"; break;
       case "weather": url = "https://cleaningsupplies.github.io/weather_public/"; break;
       case "noodlee": url = "https://cleaningsupplies.github.io/noodle_public/html/homepage.html"; break;
+      case "portfolio": alert("You're on it 🙃"); break;
       default: url = ""; break; 
     }
     window.open(url, '_blank');
@@ -63,7 +64,7 @@ export default function Projects() {
                 </td>
               </tr>
               <tr>
-                <td className={styles['fade']} id={styles["_4"]}>
+                <td className={styles['fade']} id={styles["_4"]} onClick={() => openProject('portfolio')}>
                     <span className={`${styles['project']} ${styles['title']}`}>Portfolio</span><br></br>
                     <span className={`${styles['project']} ${styles['description']}`}>React, NodeJS</span>
                 </td>
@@ -127,7 +128,7 @@ export default function Projects() {
                 </td>
               </tr>
               <tr>
-                <td className={styles['fade']} id={styles["_4"]}>
+                <td className={styles['fade']} id={styles["_4"]} onClick={() => openProject('portfolio')}>
                     <span className={`${styles['project']} ${styles['title']}`}>Portfolio</span><br></br>
                     <span className={`${styles['project']} ${styles['description']}`}>React, NodeJS</span>
                 </td>
