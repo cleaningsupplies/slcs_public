@@ -21,6 +21,25 @@ export default function Navigation() {
         contact: "Contact"
     }
 
+    //check size of window at needed moment
+    window.addEventListener("resize", () => { checkSize() });
+
+    //click somewhere to close menu
+    document.addEventListener("click", (e) => closeNavbar(e))
+
+    function closeNavbar(e){
+        const navbar_id = document.querySelector("#navbar");
+
+        if(navbar_id.className === navbar_responsive && (e.target.className === menu || e.target.className === close || e.target.tagName === "svg" || e.target.tagName === "path")){
+
+        }else{
+            if( navbar_id.className === navbar_responsive){
+                document.querySelector(`.${close}`).style.display = "none";
+                document.querySelector(`.${menu}`).style.display = "block";
+            }
+            navbar_id.className = navbar;
+        }
+    }
 
     function checkSize(){
         const navbar_id = document.querySelector("#navbar");
@@ -42,6 +61,7 @@ export default function Navigation() {
         }
     }
 
+    //open responsive menu, adding/hiding icons like hamurger menu and x
     function openNavMenu() {
         const navbar_id = document.querySelector("#navbar");
 
@@ -55,26 +75,6 @@ export default function Navigation() {
             document.querySelector(`.${menu}`).style.display = "none";
         }
     }
-
- 
-    window.addEventListener("resize", () => { checkSize() });
-
-
-    document.addEventListener("click", (e) => {
-
-        const navbar_id = document.querySelector("#navbar");
-
-        if(navbar_id.className === navbar_responsive && (e.target.className === menu || e.target.className === close || e.target.tagName === "svg" || e.target.tagName === "path")){
-
-        }else{
-            if( navbar_id.className === navbar_responsive){
-                document.querySelector(`.${close}`).style.display = "none";
-                document.querySelector(`.${menu}`).style.display = "block";
-            }
-            navbar_id.className = navbar;
-        }
-    })
-
 
   return (
     <>
@@ -102,8 +102,6 @@ export default function Navigation() {
                         {strings.contact}
                     </NavLink>
                 </div>
-                
-                
             </div>
             <Routes>
                 <Route exact path="/" element={<Projects />} />

@@ -139,7 +139,6 @@ img{
     background-color: var(--primary_grey);
 }
 
-
 .fade{
     opacity: 0;
     transition: 0.4s;

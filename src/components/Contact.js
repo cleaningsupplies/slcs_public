@@ -19,6 +19,5 @@ export default function Contact() {
       </div>
       <hr className={styles["hr"]}></hr>
     </>
-    
   )
 }

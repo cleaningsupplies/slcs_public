@@ -57,7 +57,6 @@
 }
 
 @media only screen and (max-width: 1326px) {
-    /* show hamburger and hide default navItems*/
     .menu{
         float: right;
         display: block;
@@ -66,9 +65,6 @@
         text-align: center;
         z-index: 2;
     }
-
-
-
 
     .close {
         float: right;
@@ -109,8 +105,6 @@
         top: 30vh;
         padding-right: 0vw;
     }
-
-    /* show responsive navItems */
 
     .navbar_responsive > .navItem{
         float: none;

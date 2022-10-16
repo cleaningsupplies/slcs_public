@@ -6,45 +6,7 @@ export default function ContactForm() {
 
     const [status, setStatus] = useState("Send");
     const sent = "Your message was successfully sent!";
-    //const [sent, setSent] = useState("Your message was successfully sent!");
-
-    // async function handleSubmit(e){
-    //   e.preventDefault();
-    //   setStatus("Sending...");
-      
-
-    //   const form = document.querySelector("#form");
-    //   const userFeedback = document.querySelector("#sent");
-
-    //   const { name, email, message } = e.target.elements;
-    //   let details = {
-    //     name: name.value,
-    //     email: email.value,
-    //     message: message.value,
-    //   };
-     
-    //   axios({
-    //     method: 'POST',
-    //     url: "http://localhost:3000/contact/sendForm",
-    //     headers: {}, 
-    //     data: {
-    //       details: details,
-    //     }
-    //   }).then(function (response) {
-    //       //console.log(response);
-    //       userFeedback.style.visibility = "visible";
-          
-    //       //reset form and its labels
-    //       form.reset();
-    //       setStatus("Send");
-    //   }).catch(function (error) {
-    //       setSent("Oops. there's been a problem while sending, please try again.");
-    //       //console.log(error);
-    //   });
-
-    //   setTimeout(()=> userFeedback.style.visibility = "hidden", 4000);
-    // }
-
+    
     const submitHandler = (e) =>{
       e.preventDefault();
       setStatus("Sending...");
@@ -84,8 +46,56 @@ export default function ContactForm() {
               <button className={styles["submit"]} type="Submit">{status}</button>
             </div>
           </form>
+        </div>
+      </div>
+    )
+}
 
-          {/* <form id="form" className={styles["form"]} onSubmit={handleSubmit}>
+    /*
+    Use for sending mail via REST to gmail
+    */
+
+    //const [sent, setSent] = useState("Your message was successfully sent!");
+
+    // async function handleSubmit(e){
+    //   e.preventDefault();
+    //   setStatus("Sending...");
+      
+
+    //   const form = document.querySelector("#form");
+    //   const userFeedback = document.querySelector("#sent");
+
+    //   const { name, email, message } = e.target.elements;
+    //   let details = {
+    //     name: name.value,
+    //     email: email.value,
+    //     message: message.value,
+    //   };
+     
+    //   axios({
+    //     method: 'POST',
+    //     url: "http://localhost:3000/contact/sendForm",
+    //     headers: {}, 
+    //     data: {
+    //       details: details,
+    //     }
+    //   }).then(function (response) {
+    //       //console.log(response);
+    //       userFeedback.style.visibility = "visible";
+          
+    //       //reset form and its labels
+    //       form.reset();
+    //       setStatus("Send");
+    //   }).catch(function (error) {
+    //       setSent("Oops. there's been a problem while sending, please try again.");
+    //       //console.log(error);
+    //   });
+
+    //   setTimeout(()=> userFeedback.style.visibility = "hidden", 4000);
+    // }
+
+
+    /* <form id="form" className={styles["form"]} onSubmit={handleSubmit}>
             <label id="n" htmlFor='name'>Name</label>
             <input id="name" className={styles["name"]} placeholder="Name" type="text" tabIndex="12" required></input>
             <label id="e" htmlFor='email'>E-Mail address</label>
@@ -96,10 +106,4 @@ export default function ContactForm() {
               <div id="sent" className={styles["sent"]}>{sent}</div>
               <button className={styles["submit"]} type="Submit">{status}</button>
             </div>
-          </form> */}
-          
-        </div>
-      </div>
-      
-    )
-}
+        </form> */

@@ -18,7 +18,7 @@ export default function Projects() {
   return (
     <div className={styles["projects"]}>
       <div className={styles['intro']}>
-          Hej, I’m Stephanie.<br></br>
+          Hej, I'm Stephanie.<br></br>
           A junior front end developer <br></br>
           with a passion for UX/UI Design.
       </div>

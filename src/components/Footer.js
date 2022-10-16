@@ -3,7 +3,6 @@ import styles from "../css/footer.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-
 export default function Footer() {
 
   const links = {
