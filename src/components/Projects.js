@@ -129,7 +129,7 @@ export default function Projects() {
               </tr>
               <tr>
                 <td className={styles['fade']} id={styles["_4"]} onClick={() => openProject('portfolio')}>
-                    <span className={`${styles['project']} ${styles['title']}`}>Portfolio</span><br></br>
+                    <span className={`${styles['project']} ${styles['title']}`}>Portfolio</span>
                     <span className={`${styles['project']} ${styles['description']}`}>React, NodeJS</span>
                 </td>
               </tr>
