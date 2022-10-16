@@ -74,17 +74,18 @@
 }
 
 .sent{
-    width: 70%;
+    width: 60%;
     color: var(--secondary_turquoise);
     text-align: center;
     visibility: hidden;
     font-weight: 600;
     font-size: 2vh;
+    margin: 2%;
     font-family: var(--font_montserrat);
 }
 
 .submit{
-    width: 30%;
+    width: 40%;
     height: 4vh;
     background-color: var(--secondary_rose);
     border: none;

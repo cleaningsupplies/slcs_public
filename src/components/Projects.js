@@ -110,19 +110,19 @@ export default function Projects() {
           <tbody>
               <tr>
                 <td className={styles['fade']} id={styles['_1']} onClick={() => openProject('todo')}>
-                    <span className={`${styles['project']} ${styles['title']}`}>Todo App</span><br></br>
+                    <span className={`${styles['project']} ${styles['title']}`}>Todo App</span>
                     <span className={`${styles['project']} ${styles['description']}`}>ReactJS, MySQL/LocalStorage</span>
                 </td>
               </tr>
               <tr>
                 <td className={styles['fade']} id={styles["_2"]} onClick={() => openProject('weather')}>
-                    <span className={`${styles['project']} ${styles['title']}`}>Weather App</span><br></br>
+                    <span className={`${styles['project']} ${styles['title']}`}>Weather App</span>
                     <span className={`${styles['project']} ${styles['description']}`}>ReactJS, OpenWeatherMap API</span>
                 </td>
               </tr>
               <tr>
                 <td className={styles['fade']} id={styles["_3"]} onClick={() => openProject('noodlee')}>
-                    <span className={`${styles['project']} ${styles['title']}`}>Noodlee</span><br></br>
+                    <span className={`${styles['project']} ${styles['title']}`}>Noodlee</span>
                     <span className={`${styles['project']} ${styles['description']}`}>VanillaJS, Leaflet/OpenStreetMap</span>
                 </td>
               </tr>
