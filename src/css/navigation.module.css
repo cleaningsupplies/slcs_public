@@ -17,7 +17,6 @@
     width: 12vw;
     margin: 2vh 0 2vh 0;
     text-align: center;
-    font-style: italic;
     font-size: 4.2vh;
 }
 
@@ -28,14 +27,12 @@
 }
 
 .NavLink:hover{
-    color: var(--secondary_turquoise);
     font-weight: bold;
 }
 
 .active{
     font-weight: 600;
-    /* color: var(--base_font_color); */
-    color: var(--secondary_turquoise);
+    color: var(--base_font_color);
 
 }
 
