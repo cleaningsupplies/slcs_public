@@ -11,6 +11,7 @@ export default function Projects() {
       case "weather": url = "https://cleaningsupplies.github.io/weather_public/"; break;
       case "noodlee": url = "https://cleaningsupplies.github.io/noodle_public/html/homepage.html"; break;
       case "portfolio": alert("You're on it 🙃"); break;
+      case "authapp": url = "https://authappslcs.netlify.app/signin"; break;
       default: url = ""; break; 
     }
     window.open(url, '_blank');
@@ -41,7 +42,9 @@ export default function Projects() {
                 <td className={styles['turquoise']}>
                   <img className={styles['slcs']} src={require("../img/slcs.png")} alt="portfolio website"></img>
                 </td>
-                <td className={styles['grey']}></td>
+                <td className={styles['grey']}>
+                  <img className={styles['slcs']} src={require("../img/auth.png")} alt="auth app"></img>
+                </td>
                 <td className={styles['turquoise']}></td>
               </tr>
           </tbody>
@@ -68,7 +71,10 @@ export default function Projects() {
                     <span className={`${styles['project']} ${styles['title']}`}>Portfolio</span><br></br>
                     <span className={`${styles['project']} ${styles['description']}`}>React, NodeJS</span>
                 </td>
-                <td className={styles['fade']} id={styles["_5"]}></td>
+                <td className={styles['fade']} id={styles["_5"]} onClick={() => openProject('authapp')}>
+                    <span className={`${styles['project']} ${styles['title']}`}>Auth App</span><br></br>
+                    <span className={`${styles['project']} ${styles['description']}`}>React, Bootstrap, MongoDB</span>
+                </td>
                 <td className={styles['fade']} id={styles["_6"]}></td>
               </tr>
           </tbody>
@@ -98,10 +104,12 @@ export default function Projects() {
                   <img className={styles['slcs']} src={require("../img/slcs.png")} alt="portfolio website"></img>
                 </td>
               </tr>
-              {/* <tr>
-                <td className={styles['grey']}>..</td>
-              </tr>
               <tr>
+                <td className={styles['grey']}>
+                  <img className={styles['slcs']} src={require("../img/auth.png")} alt="auth app"></img>
+                </td>
+              </tr>
+              {/* <tr>
                 <td className={styles['turquoise']}>..</td>
               </tr> */}
           </tbody>
@@ -133,10 +141,13 @@ export default function Projects() {
                     <span className={`${styles['project']} ${styles['description']}`}>React, NodeJS</span>
                 </td>
               </tr>
-              {/* <tr>
-                <td className={styles['fade']} id={styles["_5"]}></td>
-              </tr>
               <tr>
+                <td className={styles['fade']} id={styles["_5"]} onClick={() => openProject('authapp')}>
+                    <span className={`${styles['project']} ${styles['title']}`}>Auth App</span>
+                    <span className={`${styles['project']} ${styles['description']}`}>React, Boostrap, MongoDB</span>
+                </td>
+              </tr>
+              {/* <tr>
                 <td className={styles['fade']} id={styles["_6"]}></td>
               </tr> */}
           </tbody> 

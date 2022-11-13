@@ -183,6 +183,16 @@ img{
     visibility: visible;
 }
 
+#_5:hover{
+    background-color: #bbbbbbc0;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#_5:hover .project{
+    visibility: visible;
+}
+
 
 
 
