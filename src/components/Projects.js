@@ -28,24 +28,24 @@ export default function Projects() {
         <table className={styles['projects_container']}>
           <tbody>
               <tr>
-                <td className={styles['rose']}>
+                <td className={styles['gray']}>
                   <img className={styles['todo']} src={require("../img/todo.png")} alt="todo app"></img>
                 </td>
-                <td className={styles['turquoise']}>
+                <td className={styles['gray_blue']}>
                   <img className={styles['weather']} src={require("../img/weather.png")} alt="weather app"></img>
                 </td>
-                <td className={styles['dk_turquoise']}>
+                <td className={styles['gray']}>
                   <img className={styles['noodlee']} src={require("../img/noodlee.png")} alt="noodlee restaurant website"></img>
                 </td>
               </tr>
               <tr>
-                <td className={styles['turquoise']}>
+                <td className={styles['gray_blue']}>
                   <img className={styles['slcs']} src={require("../img/slcs.png")} alt="portfolio website"></img>
                 </td>
-                <td className={styles['grey']}>
+                <td className={styles['gray']}>
                   <img className={styles['slcs']} src={require("../img/auth.png")} alt="auth app"></img>
                 </td>
-                <td className={styles['turquoise']}></td>
+                <td className={styles['gray_rose']}></td>
               </tr>
           </tbody>
         </table>
@@ -75,7 +75,9 @@ export default function Projects() {
                     <span className={`${styles['project']} ${styles['title']}`}>Auth App</span><br></br>
                     <span className={`${styles['project']} ${styles['description']}`}>React, Bootstrap, MongoDB</span>
                 </td>
-                <td className={styles['fade']} id={styles["_6"]}></td>
+                <td className={styles['fade']} id={styles["_6"]}>
+                    <span className={`${styles['project']} ${styles['description']}`}>Coming soon...</span>
+                </td>
               </tr>
           </tbody>
         </table>
@@ -85,32 +87,32 @@ export default function Projects() {
         <table className={styles['projects_container_responsive']}>
           <tbody>
               <tr>
-                <td className={styles['rose']}>
+                <td className={styles['gray']}>
                   <img className={styles['todo']} src={require("../img/todo.png")} alt="todo app"></img>
                 </td>
               </tr>
               <tr>
-                <td className={styles['turquoise']}>
+                <td className={styles['gray_blue']}>
                   <img className={styles['weather']} src={require("../img/weather.png")} alt="weather app"></img>
                 </td>
               </tr>
               <tr>
-                <td className={styles['dk_turquoise']}>
+                <td className={styles['gray']}>
                   <img className={styles['noodlee']} src={require("../img/noodlee.png")} alt="noodlee restaurant website"></img>
                 </td>
               </tr>
               <tr>
-                <td className={styles['turquoise']}>
+                <td className={styles['gray_blue']}>
                   <img className={styles['slcs']} src={require("../img/slcs.png")} alt="portfolio website"></img>
                 </td>
               </tr>
               <tr>
-                <td className={styles['grey']}>
+                <td className={styles['gray']}>
                   <img className={styles['slcs']} src={require("../img/auth.png")} alt="auth app"></img>
                 </td>
               </tr>
               {/* <tr>
-                <td className={styles['turquoise']}>..</td>
+                <td className={styles['gray_rose']}>..</td>
               </tr> */}
           </tbody>
         </table>

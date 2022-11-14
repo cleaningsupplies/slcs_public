@@ -15,9 +15,10 @@ export default function Contact() {
             I'd be happy to hear from you!
           </div>
         </div>
-        <ContactForm />
+        <div className={styles["contact_container"]}>
+          <ContactForm />
+        </div>
       </div>
-      <hr className={styles["hr"]}></hr>
     </>
   )
 }

@@ -17,7 +17,9 @@
     width: 12vw;
     margin: 2vh 0 2vh 0;
     text-align: center;
-    font-size: 4.2vh;
+    font-size: 3vh;
+    font-family: var(--font_montserrat);
+    text-transform: uppercase;
 }
 
 .NavLink{
@@ -27,13 +29,12 @@
 }
 
 .NavLink:hover{
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .active{
-    font-weight: 600;
+    font-weight: 500;
     color: var(--base_font_color);
-
 }
 
 .inactive{
@@ -49,7 +50,7 @@
 }
 
 .menu:hover{
-    color: var(--secondary_turquoise);
+    color: var(--base_font_color_dk);
     margin: 2vh 2vh 2vh 0;
 }
 
@@ -69,7 +70,12 @@
         margin: 2vh 2vh 2vh 0;
         text-align: center;
         z-index: 2;
-        color: var(--primary_turquoise);
+        color: var(--base_bg_color);
+        transition: 0.5s;
+    }
+
+    .close:hover{
+        color: var(--gray_rose);
     }
 
     .navItem{
@@ -84,10 +90,6 @@
         justify-content: flex-end;
         padding: 2vh 0 2vh 0;
         
-    }
-
-    .navbar_responsive .menu{
-        color: var(--primary_turquoise);
     }
 
     .navbar_responsive > .projects{
@@ -118,15 +120,20 @@
         display: block;
         position: absolute;
         z-index: 1;
-        background-color: #67898df5;
+        background-color: #b0b2bcf6;
     }  
 
     .navbar_responsive .active{
-        color: var(--primary_turquoise);
+        color: var(--base_bg_color);
+    }
+
+    .navbar_responsive .inactive:hover{
+        color: var(--gray_rose);
+        transition: 0.5s;
     }
 
     .navbar_responsive .inactive{
-        color: var(--primary_turquoise);
+        color: var(--base_bg_color);
     }
 }
 

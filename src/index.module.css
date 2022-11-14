@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  font-family: var(--font_georgia);
+  font-family: var(--font_montserrat);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--base_font_color);

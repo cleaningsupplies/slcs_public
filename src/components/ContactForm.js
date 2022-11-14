@@ -36,11 +36,11 @@ export default function ContactForm() {
           <form id="form" className={styles["form"]} name="contact" onSubmit={submitHandler}>
             <input type="hidden" name="form-name" value="contact"></input>
             <label id="n" htmlFor='name'>Name</label>
-            <input id="name" name="name" className={styles["name"]} placeholder="Name" type="text" required></input>
+            <input id="name" name="name" className={styles["name"]} placeholder="Type in your name" type="text" required></input>
             <label id="e" htmlFor='email'>E-Mail address</label>
-            <input id="email" name="email" className={styles["email"]} placeholder="E-Mail address" type="email" required></input>
+            <input id="email" name="email" className={styles["email"]} placeholder="Type in your e-mail address" type="email" required></input>
             <label id="m" htmlFor='message'>Message</label>
-            <textarea id="message" className={styles["message"]} name="message" placeholder="Message" type="text" required></textarea>
+            <textarea id="message" className={styles["message"]} name="message" placeholder="Type in your message" type="text" required></textarea>
             <div className={styles["button_container"]}>
               <div id="sent" className={styles["sent"]}>{sent}</div>
               <button className={styles["submit"]} type="Submit">{status}</button>

@@ -1,5 +1,5 @@
 :root{
-    --base_bg_color: #f0f0f0;
+    /* --base_bg_color: #f0f0f0;
     
     --base_font_color: #707070;
 
@@ -13,6 +13,21 @@
     --secondary_grey: #E2E2E2; 
 
     --font_georgia: Georgia;
+    --font_montserrat: "Montserrat"; */
+
+    --font_georgia: Georgia;
     --font_montserrat: "Montserrat";
 
+    --base_bg_color: #f0f0f0;
+
+    --base_font_color: #6e6d75;
+    --base_font_color_dk: #525157;
+
+    --gray: #e6e6e6;
+    --gray_rose: #d5c3c6;
+    --gray_rose_dk: #a18086;
+    --gray_blue: #d5d6da;
+    --gray_blue_dk: #b0b2bc;
+    --gray_blue_ddk: #6e7284;
+    
 }
