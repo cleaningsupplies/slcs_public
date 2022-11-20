@@ -21,7 +21,7 @@ export default function Projects() {
     <div className={styles["projects"]}>
       <div className={styles['intro']}>
           Hej, I'm Stephanie.<br></br>
-          A frontend developer <br></br>
+          I'm a frontend developer <br></br>
           with a passion for UX/UI Design.
       </div>
       <div className={styles['container']}>
