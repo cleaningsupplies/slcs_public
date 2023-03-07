@@ -35,7 +35,7 @@ export default function About() {
           </div>
         </div>
         <div className={styles["image_container"]}>
-          <div className={styles["image"]}></div>
+          {/* <div className={styles["image"]}></div> */}
         </div>
       </div>
     </div>
